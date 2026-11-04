@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import ProductCard from '../components/ProductCard.astro';
+import MockupStage from '../components/MockupStage.astro';
+import GuideSection from '../components/GuideSection.astro';
+import Footer from '../components/Footer.astro';
+import { siteConfig } from '../config/site';
+
+const enabledCardAds = siteConfig.cardAds.filter((ad) => ad.enabled);
+const totalCards = siteConfig.products.length + enabledCardAds.length + (siteConfig.showFuturePlaceholder ? 1 : 0);
+const gridColsClass = totalCards >= 3 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2';
+---
+
+<Layout>
+  <!-- Top Notice / Sponsor Banner -->
+  {siteConfig.topNoticeBanner.enabled && (
+    <div class="flex items-center justify-between gap-4 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[rgba(0,242,254,0.08)] to-[rgba(255,51,136,0.08)] border border-[rgba(0,242,254,0.25)] text-xs sm:text-sm backdrop-blur-[20px]">
+      <div class="flex items-center gap-2">
+        <span class="bg-[var(--accent-cyan)] text-black font-extrabold text-[10px] px-1.5 py-0.5 rounded uppercase">
+          {siteConfig.topNoticeBanner.tag}
+        </span>
+        <span class="text-[var(--text-main)] font-medium">
+          {siteConfig.topNoticeBanner.text}
+        </span>
+      </div>
+      <a
+        href={siteConfig.topNoticeBanner.url}
+        target="_blank"
+        rel="noopener"
+        class="text-[var(--accent-cyan)] font-semibold shrink-0 inline-flex items-center gap-1 hover:underline"
+      >
+        <span>{siteConfig.topNoticeBanner.actionLabel}</span>
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+    </div>
+  )}
+
+  <!-- Navigation Bar -->
+  <Header />
+
+  <!-- Hero Banner -->
+  <Hero />
+
+  <!-- Product Matrix (animaku + zakoway + native card ads + future extension) -->
+  <section id="matrix" class="flex flex-col gap-5">
+    <div class="flex justify-between items-end">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight flex items-center gap-2">
+          <svg class="w-6 h-6 text-[var(--accent-cyan)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>核心生态矩阵</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-[var(--text-dim)]">Web 网页端与移动 App 均已就绪，选择你喜欢的方式随时追番</p>
+      </div>
+    </div>
+
+    <div class={`grid ${gridColsClass} gap-6`}>
+      <!-- 1. Core Products (animaku, zakoway) -->
+      {siteConfig.products.map((product) => (
+        <ProductCard product={product} />
+      ))}
+
+      <!-- 2. Configured Card Ads (seamless native card style) -->
+      {enabledCardAds.map((ad) => (
+        <ProductCard ad={ad} />
+      ))}
+
+      <!-- 3. Future Placeholder Card (可选开关) -->
+      {siteConfig.showFuturePlaceholder && (
+        <ProductCard isFuturePlaceholder={true} />
+      )}
+    </div>
+  </section>
+
+  <!-- Interactive Device Showcase (实机展台，可在 site.ts 中开关) -->
+  {siteConfig.showMockupStage && (
+    <MockupStage />
+  )}
+
+  <!-- Official Domains & Anti-Lost Guide -->
+  <GuideSection />
+
+  <!-- Footer -->
+  <Footer />
+</Layout>

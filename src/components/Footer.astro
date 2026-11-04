@@ -1,0 +1,28 @@
+---
+import { siteConfig } from '../config/site';
+---
+
+<footer class="pt-8 border-t border-[var(--bg-card-border)] flex flex-col items-center text-center gap-6">
+  {siteConfig.sponsors && siteConfig.sponsors.length > 0 && (
+    <div class="w-full flex flex-col items-center gap-3">
+      <div class="text-[11px] font-bold uppercase tracking-wider text-[var(--text-dim)]">赞助伙伴 & 友情链接</div>
+      <div class="flex justify-center items-center gap-3 sm:gap-4 flex-wrap">
+        {siteConfig.sponsors.map((sp) => (
+          <a
+            href={sp.url}
+            target="_blank"
+            rel="noopener"
+            class="px-4 py-1.5 rounded-full text-xs font-medium bg-[var(--bg-card)] border border-[var(--bg-card-border)] text-[var(--text-muted)] hover:text-[var(--accent-cyan)] hover:border-[var(--bg-card-border-hover)] transition-all"
+          >
+            {sp.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <div class="text-xs text-[var(--text-dim)] max-w-[640px] leading-relaxed">
+    <p>© 2026 {siteConfig.brand.name}. 本站仅为官方导航与客户端发布索引，不提供任何版权视频存储。</p>
+    <p class="mt-1">适配 Chrome、Edge、Safari 等现代浏览器与主流移动设备。</p>
+  </div>
+</footer>

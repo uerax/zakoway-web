@@ -1,0 +1,28 @@
+---
+import { siteConfig } from '../config/site';
+---
+
+<header class="flex justify-between items-center gap-4 px-5 py-3 rounded-full bg-[var(--bg-surface)] backdrop-blur-[20px] border border-[var(--bg-card-border)] shadow-[var(--glass-shadow)]">
+  <a href="/" class="flex items-center gap-3 no-underline text-inherit group">
+    <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--accent-cyan)] to-[var(--accent-pink)] flex items-center justify-center text-white font-extrabold text-lg shadow-[0_4px_12px_rgba(0,242,254,0.35)] transition-transform duration-300 group-hover:scale-105">
+      {siteConfig.brand.logoText}
+    </div>
+    <div class="font-bold text-lg tracking-tight bg-gradient-to-r from-[var(--text-main)] to-[var(--text-muted)] bg-clip-text text-transparent">
+      {siteConfig.brand.name}
+    </div>
+  </a>
+
+  <div class="flex items-center gap-2 sm:gap-3">
+    <a href="#matrix" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-full bg-[var(--bg-card)] border border-[var(--bg-card-border)] text-[var(--text-main)] hover:bg-[var(--bg-surface-hover)] hover:border-[var(--bg-card-border-hover)] transition-all">
+      <svg class="w-4 h-4 text-[var(--accent-cyan)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+      <span>产品矩阵</span>
+    </a>
+    <a href="#guide" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs sm:text-sm font-medium rounded-full bg-[var(--bg-card)] border border-[var(--bg-card-border)] text-[var(--text-main)] hover:bg-[var(--bg-surface-hover)] hover:border-[var(--bg-card-border-hover)] transition-all">
+      <svg class="w-4 h-4 text-[var(--accent-pink)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+      <span>防失联</span>
+    </a>
+    <button onclick="window.toggleTheme()" class="p-2 rounded-full bg-[var(--bg-card)] border border-[var(--bg-card-border)] text-[var(--text-main)] hover:bg-[var(--bg-surface-hover)] transition-all" title="切换模式">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    </button>
+  </div>
+</header>

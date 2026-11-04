@@ -1,0 +1,100 @@
+---
+---
+
+<section class="p-6 md:p-8 rounded-[1.25rem] bg-[var(--bg-surface)] border border-[var(--bg-card-border)] backdrop-blur-[20px] shadow-[var(--glass-shadow)] flex flex-col gap-6">
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+    <div>
+      <h2 class="text-xl font-bold tracking-tight">产品实机视窗展台</h2>
+      <p class="text-xs sm:text-sm text-[var(--text-dim)]">支持动态切换预览 animaku 网页端播放器与 zakoway 手机客户端</p>
+    </div>
+    <div class="flex gap-2 p-1 rounded-full bg-[var(--bg-card)] border border-[var(--bg-card-border)]">
+      <button id="btn-show-web" class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-[var(--bg-surface-hover)] text-[var(--accent-cyan)] shadow-sm">
+        💻 animaku 网页端
+      </button>
+      <button id="btn-show-app" class="px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-[var(--text-muted)] hover:text-[var(--text-main)] transition-all">
+        📱 zakoway 手机端
+      </button>
+    </div>
+  </div>
+
+  <div class="flex justify-center items-center py-4 min-h-[380px]">
+    <!-- Web Browser Mockup -->
+    <div id="mock-browser" class="w-full max-w-[840px] rounded-xl bg-slate-950 border border-white/10 shadow-2xl overflow-hidden transition-all duration-300">
+      <div class="bg-slate-900 px-4 py-2.5 flex items-center gap-3 border-b border-white/10">
+        <div class="flex gap-1.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        </div>
+        <div class="flex-grow bg-slate-950 px-3 py-1 rounded text-xs text-slate-400 flex items-center gap-2 font-mono">
+          <svg class="w-3.5 h-3.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>https://animaku.example.com/play/ep01</span>
+        </div>
+      </div>
+      <div class="p-5 bg-slate-950 flex flex-col gap-4">
+        <div class="w-full h-48 sm:h-56 rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 border border-white/10 relative overflow-hidden flex items-center justify-center">
+          <div class="absolute text-sm text-white/80 font-medium whitespace-nowrap animate-[danmaku_8s_linear_infinite]" style="top: 20px;">
+            🎉 芜湖！这集作画直接封神了！！！
+          </div>
+          <div class="absolute text-sm text-white/80 font-medium whitespace-nowrap animate-[danmaku_8s_linear_infinite]" style="top: 70px; animation-delay: 3s;">
+            前方高能！名场面即将来袭！
+          </div>
+          <div class="w-12 h-12 rounded-full bg-[var(--accent-cyan)] flex items-center justify-center text-black shadow-[0_0_20px_var(--accent-cyan)] cursor-pointer hover:scale-110 transition-transform">
+            <svg class="w-6 h-6 ml-0.5" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="h-20 rounded-md bg-gradient-to-br from-blue-600 to-indigo-800 p-2.5 flex items-end text-xs font-bold text-white shadow">葬送的芙莉莲</div>
+          <div class="h-20 rounded-md bg-gradient-to-br from-pink-600 to-rose-800 p-2.5 flex items-end text-xs font-bold text-white shadow">我推的孩子</div>
+          <div class="h-20 rounded-md bg-gradient-to-br from-purple-600 to-violet-800 p-2.5 flex items-end text-xs font-bold text-white shadow">咒术回战</div>
+          <div class="h-20 rounded-md bg-gradient-to-br from-emerald-600 to-teal-800 p-2.5 flex items-end text-xs font-bold text-white shadow">鬼灭之刃</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone Mockup (Hidden by default) -->
+    <div id="mock-phone" class="hidden w-[280px] h-[520px] rounded-[36px] bg-black border-[10px] border-slate-800 shadow-2xl overflow-hidden flex-col">
+      <div class="w-24 h-4 bg-slate-800 mx-auto rounded-b-xl"></div>
+      <div class="p-4 flex-grow flex flex-col gap-3 bg-[#0b0f17]">
+        <div class="flex justify-between items-center pt-2">
+          <span class="font-extrabold text-base text-[var(--accent-pink)]">zakoway</span>
+          <span class="text-xs text-emerald-400 font-semibold">● 运行中</span>
+        </div>
+        <div class="h-32 rounded-xl bg-gradient-to-t from-black/80 to-transparent bg-slate-700 p-3 flex flex-col justify-end text-white border border-white/10">
+          <span class="text-[10px] font-bold text-pink-400 uppercase">今日更新新番</span>
+          <span class="font-bold text-sm">电锯人 剧场版</span>
+        </div>
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">追番管理</div>
+        <div class="p-2.5 rounded-lg bg-white/5 border border-white/10 flex justify-between items-center text-xs">
+          <span>离线缓存队列</span>
+          <span class="text-[var(--accent-cyan)] font-semibold">100% 完成</span>
+        </div>
+        <div class="p-2.5 rounded-lg bg-white/5 border border-white/10 flex justify-between items-center text-xs">
+          <span>新番更新推送</span>
+          <span class="text-emerald-400 font-semibold">已开启</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  const btnWeb = document.getElementById('btn-show-web');
+  const btnApp = document.getElementById('btn-show-app');
+  const mockBrowser = document.getElementById('mock-browser');
+  const mockPhone = document.getElementById('mock-phone');
+
+  btnWeb?.addEventListener('click', () => {
+    mockBrowser.style.display = 'block';
+    mockPhone.style.display = 'none';
+    btnWeb.className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-[var(--bg-surface-hover)] text-[var(--accent-cyan)] shadow-sm';
+    btnApp.className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-[var(--text-muted)] hover:text-[var(--text-main)] transition-all';
+  });
+
+  btnApp?.addEventListener('click', () => {
+    mockBrowser.style.display = 'none';
+    mockPhone.style.display = 'flex';
+    btnApp.className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-[var(--bg-surface-hover)] text-[var(--accent-pink)] shadow-sm';
+    btnWeb.className = 'px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-[var(--text-muted)] hover:text-[var(--text-main)] transition-all';
+  });
+</script>

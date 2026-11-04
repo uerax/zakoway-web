@@ -1,0 +1,148 @@
+---
+import '../styles/global.css';
+import { siteConfig } from '../config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+}
+
+const {
+  title = siteConfig.seo.title,
+  description = siteConfig.seo.description,
+  keywords = siteConfig.seo.keywords,
+  image = siteConfig.seo.ogImage,
+  url = siteConfig.seo.siteUrl,
+} = Astro.props;
+
+const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+
+// JSON-LD Structured Data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${url}/#website`,
+      "url": url,
+      "name": siteConfig.brand.name,
+      "description": description,
+      "publisher": {
+        "@type": "Organization",
+        "name": siteConfig.seo.author,
+        "url": url
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Animaku",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Web Browser, Windows, macOS, Linux",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Animaku 多资源聚合的日漫番剧、剧场版动画在线观看，支持弹幕播放、画质超分与智能跳过 OP/ED。"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "zakoway",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Android, iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "zakoway 多平台客户端，比 Web 端有更高的权限，支持更多视频源与视频超分播放。"
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywordsString} />
+    <meta name="author" content={siteConfig.seo.author} />
+    <link rel="canonical" href={url} />
+
+    <!-- Crawlers & Robots Directives -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Theme & Color Scheme -->
+    <meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Open Graph / Facebook / Discord / Telegram -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteConfig.brand.name} />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:locale" content="zh_CN" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- JSON-LD Structured Data Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="relative min-h-screen">
+    <!-- Ambient Background Glow -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true">
+      <div class="absolute w-[500px] h-[500px] -top-24 left-[15%] rounded-full blur-[100px] opacity-40 bg-[radial-gradient(circle,var(--accent-cyan)_0%,transparent_70%)]"></div>
+      <div class="absolute w-[450px] h-[450px] top-[25%] right-[10%] rounded-full blur-[100px] opacity-40 bg-[radial-gradient(circle,var(--accent-pink)_0%,transparent_70%)]"></div>
+      <div class="absolute w-[600px] h-[600px] bottom-[5%] left-[25%] rounded-full blur-[120px] opacity-35 bg-[radial-gradient(circle,var(--accent-purple)_0%,transparent_70%)]"></div>
+    </div>
+
+    <!-- Main Page Container -->
+    <div class="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 py-6 md:py-12 flex flex-col gap-12 md:gap-16">
+      <slot />
+    </div>
+
+    <script is:inline>
+      // Theme Toggle Helper
+      window.toggleTheme = function() {
+        const doc = document.documentElement;
+        const current = doc.getAttribute('data-theme') || 'dark';
+        const next = current === 'light' ? 'dark' : 'light';
+        doc.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch(e) {}
+      };
+
+      try {
+        const saved = localStorage.getItem('theme');
+        if (saved) document.documentElement.setAttribute('data-theme', saved);
+      } catch(e) {}
+    </script>
+  </body>
+</html>

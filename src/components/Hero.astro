@@ -1,0 +1,18 @@
+---
+import { siteConfig } from '../config/site';
+---
+
+<section class="text-center flex flex-col items-center gap-4 pt-4 pb-2">
+  <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--bg-card)] border border-[var(--bg-card-border)] text-xs font-semibold text-[var(--text-muted)]">
+    <span class="w-2 h-2 rounded-full bg-[var(--accent-green)] shadow-[0_0_8px_var(--accent-green)] animate-pulse"></span>
+    <span>{siteConfig.brand.pillText}</span>
+  </div>
+
+  <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.15]">
+    连接你的 <span class="bg-gradient-to-r from-[var(--accent-cyan)] via-[#38bdf8] to-[var(--accent-pink)] bg-clip-text text-transparent">二次元世界</span>
+  </h1>
+
+  <p class="max-w-[620px] text-[var(--text-muted)] text-base sm:text-lg leading-relaxed">
+    {siteConfig.brand.description}
+  </p>
+</section>

@@ -1,0 +1,140 @@
+---
+import type { Product, AdSlot } from '../config/site';
+
+interface Props {
+  product?: Product;
+  ad?: AdSlot;
+  isFuturePlaceholder?: boolean;
+}
+
+const { product, ad, isFuturePlaceholder } = Astro.props;
+
+// Determine colors
+const themeColor = product ? product.themeColor : (ad ? (ad.themeColor || '#f59e0b') : '#64748b');
+const themeColorAlt = product ? (product.themeColorAlt || product.themeColor) : (ad ? (ad.themeColorAlt || '#d97706') : '#475569');
+---
+
+{isFuturePlaceholder ? (
+  <article class="relative flex flex-col items-center justify-center text-center p-7 rounded-[1.25rem] border border-dashed border-[var(--bg-card-border)] bg-[rgba(255,255,255,0.02)] min-h-[380px]">
+    <div class="w-14 h-14 rounded-full bg-[var(--bg-card)] border border-dashed border-[var(--bg-card-border)] flex items-center justify-center text-[var(--text-dim)] mb-4">
+      <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+    </div>
+    <h3 class="text-lg font-bold mb-2">更多生态正在孵化</h3>
+    <p class="text-xs sm:text-sm text-[var(--text-dim)] max-w-[240px] mb-4">
+      预留扩展位：后续通过配置文件可一键上线漫画、论坛或同人工具模块。
+    </p>
+    <span class="text-xs font-semibold text-[var(--accent-cyan)] tracking-wider">CONFIG-DRIVEN</span>
+  </article>
+) : product ? (
+  <article
+    class="group relative flex flex-col justify-between p-7 rounded-[1.25rem] bg-[var(--bg-surface)] border border-[var(--bg-card-border)] hover:border-[var(--bg-card-border-hover)] backdrop-blur-[20px] shadow-[var(--glass-shadow)] transition-all duration-300 hover:-translate-y-1.5 min-h-[380px] overflow-hidden"
+    style={`--card-accent: ${themeColor}; --card-accent-alt: ${themeColorAlt};`}
+  >
+    <!-- Top Glowing Border Line on Hover -->
+    <div class="absolute top-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={`background: linear-gradient(90deg, transparent, ${themeColor}, transparent);`}></div>
+
+    <div>
+      <div class="flex justify-between items-start mb-5">
+        <div class="w-13 h-13 rounded-2xl flex items-center justify-center p-3 border border-[var(--bg-card-border)] bg-gradient-to-br from-white/10 to-white/0 shadow-md" style={`color: ${themeColor};`}>
+          {product.type === 'web' ? (
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          ) : (
+            <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+          )}
+        </div>
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold border" style={`background: ${themeColor}18; border-color: ${themeColor}40; color: ${themeColor};`}>
+          {product.badge}
+        </span>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold tracking-tight mb-1">{product.name}</h3>
+        <div class="text-xs sm:text-sm font-semibold mb-3" style={`color: ${themeColor};`}>{product.subtext}</div>
+        <p class="text-sm text-[var(--text-muted)] leading-relaxed mb-4">{product.description}</p>
+
+        <ul class="flex flex-col gap-2 mb-6">
+          {product.features.map((feat) => (
+            <li class="text-xs sm:text-sm text-[var(--text-muted)] flex items-center gap-2">
+              <svg class="w-4 h-4 shrink-0" style={`color: ${themeColor};`} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>{feat}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2.5">
+      <a
+        href={product.primaryAction.url}
+        target="_blank"
+        rel="noopener"
+        class="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-bold text-sm text-black shadow-lg hover:brightness-110 hover:-translate-y-0.5 transition-all"
+        style={`background: linear-gradient(135deg, ${themeColor}, ${themeColorAlt});`}
+      >
+        <span>{product.primaryAction.label}</span>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+
+      {product.secondaryActions && product.secondaryActions.length > 0 && (
+        <div class="flex gap-2 flex-wrap">
+          {product.secondaryActions.map((sub) => (
+            <a
+              href={sub.url}
+              class="flex-1 min-w-[100px] flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium bg-[var(--bg-card)] border border-[var(--bg-card-border)] text-[var(--text-muted)] hover:text-[var(--text-main)] hover:bg-[var(--bg-surface-hover)] hover:border-[var(--bg-card-border-hover)] transition-all"
+            >
+              <span>{sub.label}</span>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </article>
+) : ad ? (
+  <article
+    class="group relative flex flex-col justify-between p-7 rounded-[1.25rem] bg-[var(--bg-surface)] border border-[var(--bg-card-border)] hover:border-[var(--bg-card-border-hover)] backdrop-blur-[20px] shadow-[var(--glass-shadow)] transition-all duration-300 hover:-translate-y-1.5 min-h-[380px] overflow-hidden"
+    style={`--card-accent: ${themeColor}; --card-accent-alt: ${themeColorAlt};`}
+  >
+    <div class="absolute top-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={`background: linear-gradient(90deg, transparent, ${themeColor}, transparent);`}></div>
+
+    <div>
+      <div class="flex justify-between items-start mb-5">
+        <div class="w-13 h-13 rounded-2xl flex items-center justify-center p-3 border border-[var(--bg-card-border)] bg-gradient-to-br from-white/10 to-white/0 shadow-md" style={`color: ${themeColor};`}>
+          <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold border bg-amber-500/10 border-amber-500/30 text-amber-500">
+          {ad.tag}
+        </span>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-bold tracking-tight mb-1">{ad.title}</h3>
+        {ad.subtext && <div class="text-xs sm:text-sm font-semibold mb-3 text-amber-500">{ad.subtext}</div>}
+        <p class="text-sm text-[var(--text-muted)] leading-relaxed mb-4">{ad.description}</p>
+
+        {ad.features && (
+          <ul class="flex flex-col gap-2 mb-6">
+            {ad.features.map((feat) => (
+              <li class="text-xs sm:text-sm text-[var(--text-muted)] flex items-center gap-2">
+                <svg class="w-4 h-4 shrink-0 text-amber-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span>{feat}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+
+    <div>
+      <a
+        href={ad.targetUrl}
+        target="_blank"
+        rel="noopener"
+        class="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-bold text-sm text-white shadow-lg hover:brightness-110 hover:-translate-y-0.5 transition-all"
+        style={`background: linear-gradient(135deg, ${themeColor}, ${themeColorAlt});`}
+      >
+        <span>{ad.actionText || '前往查看'}</span>
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+    </div>
+  </article>
+) : null}
