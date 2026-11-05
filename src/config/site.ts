@@ -91,7 +91,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   brand: {
-    name: 'ZAKOWAY HUB',
+    name: 'ZAKOWAY',
     logoText: 'A',
     slogan: '连接你的 二次元世界',
     description: '在线弹幕追番平台，支持在线观看，支持弹幕播放，支持 OP / ED 自动跳过。',
@@ -100,8 +100,8 @@ export const siteConfig: SiteConfig = {
 
   // 0. 核心 SEO 元数据配置
   seo: {
-    title: 'ZAKOWAY HUB - Animaku (杂口动漫) 在线播放与客户端下载 ｜ 高清追番·弹幕·视频超分',
-    description: 'ZAKOWAY HUB 官方发布页与主导航。提供 Animaku (杂口动漫) Web 网页端在线追番与 Zakoway 多平台客户端下载。支持多视频源聚合、实时弹幕播放、WebGPU 画质超分、智能跳过 OP/ED 与去广告切片，随时获取最新可用域名与更新通道。',
+    title: 'ZAKOWAY - Animaku (杂口动漫) 在线播放与客户端下载 ｜ 高清追番·弹幕·视频超分',
+    description: 'ZAKOWAY 官方发布页与主导航。提供 Animaku (杂口动漫) Web 网页端在线追番与 Zakoway 多平台客户端下载。支持多视频源聚合、实时弹幕播放、WebGPU 画质超分、智能跳过 OP/ED 与去广告切片，随时获取最新可用域名与更新通道。',
     keywords: [
       // 品牌与项目
       'ZAKOWAY', 'Animaku', '杂口动漫', 'zakoway app', 'ZAKOWAY HUB',
@@ -111,7 +111,7 @@ export const siteConfig: SiteConfig = {
       // 行业高频与二次元引流词
       '二次元', 'cycani', 'girigiri', 'girigirilove', 'bimi', 'bimi动漫', '樱花动漫', 'omofun', '稀饭动漫'
     ],
-    author: 'ZAKOWAY HUB',
+    author: 'ZAKOWAY',
     siteUrl: 'https://zakoway.com',
     ogImage: '/og-image.svg',
   },

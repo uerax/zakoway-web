@@ -19,6 +19,7 @@ const {
 } = Astro.props;
 
 const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+const fullImageUrl = image.startsWith('http') ? image : `${url.replace(/\/$/, '')}${image.startsWith('/') ? '' : '/'}${image}`;
 
 // JSON-LD Structured Data
 const jsonLd = {
@@ -52,7 +53,7 @@ const jsonLd = {
       "@type": "SoftwareApplication",
       "name": "zakoway",
       "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Android, iOS",
+      "operatingSystem": "Android, Windows, iOS, macOS, Linux",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -68,11 +69,13 @@ const jsonLd = {
 <html lang="zh-CN" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <!-- Favicon & Touch Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/logo.png" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Primary SEO Meta Tags -->
@@ -98,7 +101,7 @@ const jsonLd = {
     <meta property="og:url" content={url} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={fullImageUrl} />
     <meta property="og:locale" content="zh_CN" />
 
     <!-- Twitter / X Card -->
@@ -106,7 +109,21 @@ const jsonLd = {
     <meta name="twitter:url" content={url} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={fullImageUrl} />
+
+    <!-- Prevent Flash of Unstyled Theme (FOUC) -->
+    <script is:inline>
+      (function() {
+        try {
+          const saved = localStorage.getItem('theme');
+          if (saved) {
+            document.documentElement.setAttribute('data-theme', saved);
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch(e) {}
+      })();
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -116,21 +133,21 @@ const jsonLd = {
     <!-- JSON-LD Structured Data Schema -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
-  <body class="relative min-h-screen">
-    <!-- Ambient Background Glow -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0" aria-hidden="true">
-      <div class="absolute w-[500px] h-[500px] -top-24 left-[15%] rounded-full blur-[100px] opacity-40 bg-[radial-gradient(circle,var(--accent-cyan)_0%,transparent_70%)]"></div>
-      <div class="absolute w-[450px] h-[450px] top-[25%] right-[10%] rounded-full blur-[100px] opacity-40 bg-[radial-gradient(circle,var(--accent-pink)_0%,transparent_70%)]"></div>
-      <div class="absolute w-[600px] h-[600px] bottom-[5%] left-[25%] rounded-full blur-[120px] opacity-35 bg-[radial-gradient(circle,var(--accent-purple)_0%,transparent_70%)]"></div>
+  <body class="relative min-h-[100dvh] antialiased">
+    <!-- Ambient Background Glow (Hardware accelerated, lightweight radial falloff without expensive 100px blurs) -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0 transform-gpu" aria-hidden="true">
+      <div class="absolute w-[360px] sm:w-[500px] h-[360px] sm:h-[500px] -top-24 left-[5%] sm:left-[15%] rounded-full opacity-35 bg-[radial-gradient(circle_at_center,var(--accent-cyan)_0%,transparent_70%)]"></div>
+      <div class="absolute w-[320px] sm:w-[450px] h-[320px] sm:h-[450px] top-[25%] right-[5%] sm:right-[10%] rounded-full opacity-35 bg-[radial-gradient(circle_at_center,var(--accent-pink)_0%,transparent_70%)]"></div>
+      <div class="absolute w-[380px] sm:w-[600px] h-[380px] sm:h-[600px] bottom-[5%] left-[10%] sm:left-[25%] rounded-full opacity-30 bg-[radial-gradient(circle_at_center,var(--accent-purple)_0%,transparent_70%)]"></div>
     </div>
 
-    <!-- Main Page Container -->
-    <div class="relative z-10 max-w-[1200px] mx-auto px-4 sm:px-6 py-6 md:py-12 flex flex-col gap-12 md:gap-16">
+    <!-- Main Page Container with Safe Area Support -->
+    <div class="relative z-10 max-w-[1200px] mx-auto px-3.5 sm:px-6 pt-2.5 sm:pt-5 pb-10 sm:pb-14 flex flex-col gap-5 sm:gap-7 md:gap-9">
       <slot />
     </div>
 
     <script is:inline>
-      // Theme Toggle Helper
+      // Theme Toggle Global Handler
       window.toggleTheme = function() {
         const doc = document.documentElement;
         const current = doc.getAttribute('data-theme') || 'dark';
@@ -138,11 +155,6 @@ const jsonLd = {
         doc.setAttribute('data-theme', next);
         try { localStorage.setItem('theme', next); } catch(e) {}
       };
-
-      try {
-        const saved = localStorage.getItem('theme');
-        if (saved) document.documentElement.setAttribute('data-theme', saved);
-      } catch(e) {}
     </script>
   </body>
 </html>
