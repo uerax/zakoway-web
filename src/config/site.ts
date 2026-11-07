@@ -143,7 +143,7 @@ export const siteConfig: SiteConfig = {
       themeColorAlt: '#38bdf8',
       primaryAction: {
         label: '立即进入 杂口动漫 网页端',
-        url: 'https://web.zakoway.com/',
+        url: 'https://zakoway.com/',
         isPrimary: true,
       },
       secondaryActions: [
@@ -204,7 +204,7 @@ export const siteConfig: SiteConfig = {
   backupLines: [
     {
       name: 'animaku (杂口动漫) 官方主线',
-      url: 'https://web.zakoway.com/',
+      url: 'https://zakoway.com/',
       status: '主线路',
       type: 'main',
     },
