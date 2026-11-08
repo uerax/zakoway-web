@@ -100,11 +100,11 @@ export const siteConfig: SiteConfig = {
 
   // 0. 核心 SEO 元数据配置
   seo: {
-    title: 'ZAKOWAY - Animaku (杂口动漫) 在线播放与客户端下载 ｜ 高清追番·弹幕·视频超分',
-    description: 'ZAKOWAY 官方发布页与主导航。提供 Animaku (杂口动漫) Web 网页端在线追番与 Zakoway 多平台客户端下载。支持多视频源聚合、实时弹幕播放、WebGPU 画质超分、智能跳过 OP/ED 与去广告切片，随时获取最新可用域名与更新通道。',
+    title: 'ZAKOWAY - Animaku (扎口动漫) 在线播放与客户端下载 ｜ 高清追番·弹幕·视频超分',
+    description: 'ZAKOWAY 官方发布页与主导航。提供 Animaku (扎口动漫) Web 网页端在线追番与 Zakoway 多平台客户端下载。支持多视频源聚合、实时弹幕播放、WebGPU 画质超分、智能跳过 OP/ED 与去广告切片，随时获取最新可用域名与更新通道。',
     keywords: [
       // 品牌与项目
-      'ZAKOWAY', 'Animaku', '杂口动漫', 'zakoway app', 'ZAKOWAY HUB',
+      'ZAKOWAY', 'Animaku', '扎口动漫', 'zakoway app', 'ZAKOWAY HUB',
       // 核心功能与技术
       '动漫', '番剧', '日漫', '新番', '追番', '在线动漫', '动漫网站', '弹幕动漫', '免费看动漫',
       '画质超分', 'Anime4K', '弹幕播放', '跳过OPED', '视频源去广告', 'Bangumi', '动漫APP下载', '安卓动漫客户端',
@@ -129,7 +129,7 @@ export const siteConfig: SiteConfig = {
   products: [
     {
       id: 'animaku',
-      name: 'animaku (杂口动漫)',
+      name: 'animaku (扎口动漫)',
       type: 'web',
       badge: 'Web 网页在线端',
       subtext: '无需安装 · 即开即看',
@@ -142,7 +142,7 @@ export const siteConfig: SiteConfig = {
       themeColor: '#00f2fe',
       themeColorAlt: '#38bdf8',
       primaryAction: {
-        label: '立即进入 杂口动漫 网页端',
+        label: '立即进入 扎口动漫 网页端',
         url: 'https://zakoway.com/',
         isPrimary: true,
       },
@@ -203,13 +203,13 @@ export const siteConfig: SiteConfig = {
   // 4. 备用线路与防失联列表
   backupLines: [
     {
-      name: 'animaku (杂口动漫) 官方主线',
+      name: 'animaku (扎口动漫) 官方主线',
       url: 'https://zakoway.com/',
       status: '主线路',
       type: 'main',
     },
     {
-      name: 'animaku (杂口动漫) 备用线路',
+      name: 'animaku (扎口动漫) 备用线路',
       url: 'https://bakasine.eu.org/',
       status: '备用线路',
       type: 'backup',
