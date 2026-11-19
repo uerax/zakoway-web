@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "sync": "node scripts/sync-sbhzm.mjs",
+    "update:sbhzm": "node scripts/fetch-sbhzm.mjs",
+    "download:voices": "node scripts/download-voices.mjs"
   },
   "dependencies": {
     "astro": "^5.4.0",

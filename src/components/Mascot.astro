@@ -4,7 +4,20 @@ import { getMascotQuotes, mascotConfig } from '../config/mascot';
 
 const quotes = getMascotQuotes();
 const quotesJson = JSON.stringify(quotes);
-const { avatar = '/mascot.png', remoteQuotesUrl = '', enabled = true } = mascotConfig;
+
+// 精简语音数据，仅传必要字段以减小 DOM 体积
+const compactVoices = (mascotConfig.voices || []).map((v) => ({
+  t: v.title,
+  s: v.src,
+}));
+const voicesJson = JSON.stringify(compactVoices);
+
+const {
+  avatar = '/mascot.png',
+  enableVoice = true,
+  voiceVolume = 0.5,
+  enabled = true,
+} = mascotConfig;
 
 if (!enabled) {
   return null;
@@ -14,18 +27,24 @@ if (!enabled) {
 <div
   id="site-mascot-container"
   class="fixed bottom-0 right-0 z-30 pointer-events-none select-none flex flex-col items-end justify-end group"
-  aria-label="扎口动漫吉祥物"
+  aria-label="扎口动漫看板娘"
   data-quotes={quotesJson}
-  data-remote-url={remoteQuotesUrl}
+  data-voices={voicesJson}
+  data-enable-voice={enableVoice ? 'true' : 'false'}
+  data-voice-volume={voiceVolume}
 >
   <!-- 对话气泡 (点击触发) -->
   <div
     id="mascot-dialog"
-    class="opacity-0 translate-y-2 pointer-events-none transition-all duration-300 ease-out mr-4 sm:mr-8 mb-1 max-w-[180px] sm:max-w-[220px] px-3 py-2 rounded-2xl rounded-br-sm bg-[var(--bg-surface)] border border-[var(--accent-cyan)] shadow-[0_8px_24px_rgba(0,242,254,0.25)] backdrop-blur-md text-[var(--text-main)] text-xs font-medium leading-relaxed"
+    class="opacity-0 translate-y-2 pointer-events-none transition-all duration-300 ease-out mr-3 sm:mr-8 mb-2 max-w-[210px] sm:max-w-[260px] p-3 rounded-2xl rounded-br-sm bg-[var(--bg-surface)] border border-[var(--accent-cyan)] shadow-[0_8px_24px_rgba(0,242,254,0.28)] backdrop-blur-md text-[var(--text-main)] text-xs font-medium leading-relaxed"
     role="status"
     aria-live="polite"
   >
-    <span id="mascot-text">{quotes[0] || '今天也要开心追番哦！✨'}</span>
+    <div id="mascot-text" class="line-clamp-4 break-words leading-relaxed text-[11.5px] sm:text-xs">{quotes[0] || '……'}</div>
+    <div id="mascot-audio-tag" class="hidden items-center gap-1 mt-1.5 pt-1.5 border-t border-white/10 text-[10px] text-[var(--accent-cyan)]">
+      <svg class="w-3 h-3 shrink-0 animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+      <span id="mascot-audio-title" class="truncate font-mono">语音播放中</span>
+    </div>
   </div>
 
   <!-- 看板娘形象 -->
@@ -57,67 +76,136 @@ if (!enabled) {
     animation: mascot-float 4s ease-in-out infinite;
   }
 
-  /* 触摸或悬浮时微动停顿 */
   #site-mascot-container:hover .animate-mascot-peek {
     animation-play-state: paused;
   }
 </style>
 
 <script is:inline>
-  (function() {
+  (function () {
     const container = document.getElementById('site-mascot-container');
     const dialog = document.getElementById('mascot-dialog');
     const textEl = document.getElementById('mascot-text');
+    const audioTag = document.getElementById('mascot-audio-tag');
+    const audioTitle = document.getElementById('mascot-audio-title');
     const mascotImg = document.getElementById('mascot-img');
 
     if (!container || !dialog || !textEl || !mascotImg) return;
 
     let quotes = [];
+    let voices = [];
     try {
       quotes = JSON.parse(container.getAttribute('data-quotes') || '[]');
-    } catch(e) {}
+      voices = JSON.parse(container.getAttribute('data-voices') || '[]');
+    } catch (e) {}
 
-    if (!Array.isArray(quotes) || quotes.length === 0) {
-      quotes = ['扎口动漫，高清追番不迷路！✨'];
+    const enableVoice = container.getAttribute('data-enable-voice') === 'true';
+    const rawVolume = parseFloat(container.getAttribute('data-voice-volume') || '0.5');
+    const targetVolume = isNaN(rawVolume) ? 0.5 : Math.min(1, Math.max(0, rawVolume));
+
+    // 二次元傲娇彩蛋后缀（长小作文智能截断提示）
+    const overflowEggs = [
+      '…（太长了被看板娘吃掉啦！ᐠ( ᐛ )ᐟ）',
+      '…（小作文太长，不想念了啦！）',
+      '…（长篇大论，看板娘CPU烧了喵~）',
+      '…（太长啦，建议回原贴品鉴）',
+    ];
+
+    function getRandomFallbackQuote() {
+      if (Array.isArray(quotes) && quotes.length > 0) {
+        return quotes[Math.floor(Math.random() * quotes.length)];
+      }
+      return '……';
     }
 
-    // 可选：远程热更新词库（免构建即时生效）
-    const remoteUrl = container.getAttribute('data-remote-url');
-    if (remoteUrl) {
-      fetch(remoteUrl)
-        .then((res) => res.json())
-        .then((remoteData) => {
-          if (Array.isArray(remoteData) && remoteData.length > 0) {
-            // 合并去重
-            const merged = Array.from(new Set([...quotes, ...remoteData.map(String).filter(Boolean)]));
-            if (merged.length > 0) quotes = merged;
-          }
-        })
-        .catch(() => {});
+    /**
+     * 智能格式化语录长度：
+     * 超过 62 字自动优雅截断并追加二次元彩蛋，避免撑破气泡
+     */
+    function formatQuote(rawText) {
+      if (!rawText || typeof rawText !== 'string') return getRandomFallbackQuote();
+      const clean = rawText.trim();
+      const MAX_LEN = 62;
+      if (clean.length <= MAX_LEN) {
+        return clean;
+      }
+      const egg = overflowEggs[Math.floor(Math.random() * overflowEggs.length)];
+      return clean.slice(0, 44) + egg;
     }
 
     let timer = null;
-    let lastIndex = -1;
+    let currentAudio = null;
 
-    mascotImg.addEventListener('click', () => {
-      // 避免连续两次抽到相同的台词
-      let nextIndex = Math.floor(Math.random() * quotes.length);
-      if (quotes.length > 1 && nextIndex === lastIndex) {
-        nextIndex = (nextIndex + 1) % quotes.length;
+    function showDialog(rawText, voiceTitle) {
+      const formattedText = formatQuote(rawText);
+      textEl.textContent = formattedText;
+
+      if (voiceTitle && audioTag && audioTitle) {
+        audioTitle.textContent = voiceTitle;
+        audioTag.classList.remove('hidden');
+        audioTag.classList.add('flex');
+      } else if (audioTag) {
+        audioTag.classList.remove('flex');
+        audioTag.classList.add('hidden');
       }
-      lastIndex = nextIndex;
 
-      textEl.textContent = quotes[nextIndex];
-
-      // 显示气泡动画
       dialog.classList.remove('opacity-0', 'translate-y-2');
       dialog.classList.add('opacity-100', 'translate-y-0');
+
+      // 自适应停留时长：根据字数计算，兼顾短句与长句
+      const dynamicDuration = Math.min(5000, Math.max(3600, formattedText.length * 75));
 
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => {
         dialog.classList.remove('opacity-100', 'translate-y-0');
         dialog.classList.add('opacity-0', 'translate-y-2');
-      }, 3200);
+      }, dynamicDuration);
+    }
+
+    mascotImg.addEventListener('click', async () => {
+      // 1. 本地兜底台词立即渲染（零延迟体验，来自 sbhzm 烂梗库）
+      let displayQuote = getRandomFallbackQuote();
+
+      // 2. 语音播放（50% 音量）
+      let playedTitle = '';
+      if (enableVoice && Array.isArray(voices) && voices.length > 0) {
+        try {
+          const randomVoice = voices[Math.floor(Math.random() * voices.length)];
+          if (randomVoice && randomVoice.s) {
+            if (currentAudio) {
+              currentAudio.pause();
+              currentAudio = null;
+            }
+            // 直接使用本站本地 CDN 音频直链，零跨域，30ms 极速秒播
+            const audioUrl = randomVoice.s;
+
+            const audio = new Audio(audioUrl);
+            audio.volume = targetVolume; // 严格按要求 50% 音量 (0.5)
+            playedTitle = randomVoice.t || '语音';
+            currentAudio = audio;
+            audio.play().catch(() => {});
+          }
+        } catch (e) {}
+      }
+
+      showDialog(displayQuote, playedTitle);
+
+      // 3. 在线优先：异步请求 Cloudflare Pages 开放聚合端点获取实时最新烂梗 (使用 /meme/random 防缓存)
+      try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 1800);
+        const res = await fetch('/meme/random', { signal: controller.signal });
+        clearTimeout(timeout);
+        if (res.ok) {
+          const liveData = await res.json();
+          const liveContent = liveData?.quote || liveData?.content;
+          if (liveContent && typeof liveContent === 'string' && liveContent.trim()) {
+            showDialog(liveContent.trim(), playedTitle);
+          }
+        }
+      } catch (err) {
+        // 网络超时或本地无 function 时，安静保留刚才的本地兜底词
+      }
     });
   })();
 </script>

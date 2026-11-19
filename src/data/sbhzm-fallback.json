@@ -1,0 +1,1482 @@
+{
+  "updatedAt": "2026-11-19T16:32:31.248Z",
+  "totalVoices": 191,
+  "totalQuotes": 136,
+  "voices": [
+    {
+      "id": "ruma&zanghua-1",
+      "title": "byd星怒",
+      "src": "/audio/buttons/ruma&zanghua/byd星怒.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.011
+    },
+    {
+      "id": "ruma&zanghua-2",
+      "title": "低能儿",
+      "src": "/audio/buttons/ruma&zanghua/低能儿.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 2.612
+    },
+    {
+      "id": "ruma&zanghua-3",
+      "title": "你们是不是听不懂人话",
+      "src": "/audio/buttons/ruma&zanghua/你们是不是听不懂人话.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 2.901
+    },
+    {
+      "id": "ruma&zanghua-4",
+      "title": "你们是人类吗？",
+      "src": "/audio/buttons/ruma&zanghua/你们是人类吗？.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.429
+    },
+    {
+      "id": "ruma&zanghua-5",
+      "title": "你们是蠢猪吧",
+      "src": "/audio/buttons/ruma&zanghua/你们是蠢猪吧.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.118
+    },
+    {
+      "id": "ruma&zanghua-6",
+      "title": "你们没有自己的生活吗",
+      "src": "/audio/buttons/ruma&zanghua/你们没有自己的生活吗.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 4.4
+    },
+    {
+      "id": "ruma&zanghua-7",
+      "title": "你们这群没用的东西",
+      "src": "/audio/buttons/ruma&zanghua/你们这群没用的东西.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 5.1
+    },
+    {
+      "id": "ruma&zanghua-8",
+      "title": "傻狗",
+      "src": "/audio/buttons/ruma&zanghua/傻狗.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.444
+    },
+    {
+      "id": "ruma&zanghua-9",
+      "title": "傻狗弹幕",
+      "src": "/audio/buttons/ruma&zanghua/傻狗弹幕.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 8.2
+    },
+    {
+      "id": "ruma&zanghua-10",
+      "title": "加一个牛魔这两个字",
+      "src": "/audio/buttons/ruma&zanghua/加一个牛魔这两个字.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 9.9
+    },
+    {
+      "id": "ruma&zanghua-11",
+      "title": "卧槽",
+      "src": "/audio/buttons/ruma&zanghua/卧槽.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.4
+    },
+    {
+      "id": "ruma&zanghua-12",
+      "title": "咦好恶心1",
+      "src": "/audio/buttons/ruma&zanghua/咦好恶心1.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 2.56
+    },
+    {
+      "id": "ruma&zanghua-13",
+      "title": "咦好恶心2",
+      "src": "/audio/buttons/ruma&zanghua/咦好恶心2.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 6.3
+    },
+    {
+      "id": "ruma&zanghua-14",
+      "title": "哎呀卧槽",
+      "src": "/audio/buttons/ruma&zanghua/哎呀卧槽.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 2.368
+    },
+    {
+      "id": "ruma&zanghua-15",
+      "title": "哎呦我操",
+      "src": "/audio/buttons/ruma&zanghua/哎呦我操.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.749
+    },
+    {
+      "id": "ruma&zanghua-16",
+      "title": "太初生了",
+      "src": "/audio/buttons/ruma&zanghua/太初生了.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.862
+    },
+    {
+      "id": "ruma&zanghua-17",
+      "title": "好垃圾",
+      "src": "/audio/buttons/ruma&zanghua/好垃圾.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 7.3
+    },
+    {
+      "id": "ruma&zanghua-18",
+      "title": "好恶心啊",
+      "src": "/audio/buttons/ruma&zanghua/好恶心啊.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.131
+    },
+    {
+      "id": "ruma&zanghua-19",
+      "title": "好蠢",
+      "src": "/audio/buttons/ruma&zanghua/好蠢.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.536
+    },
+    {
+      "id": "ruma&zanghua-20",
+      "title": "妈的素质有待降低",
+      "src": "/audio/buttons/ruma&zanghua/妈的素质有待降低.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 5.7
+    },
+    {
+      "id": "ruma&zanghua-22",
+      "title": "弱智弹幕傻狗弹幕",
+      "src": "/audio/buttons/ruma&zanghua/弱智弹幕傻狗弹幕.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 4.624
+    },
+    {
+      "id": "ruma&zanghua-23",
+      "title": "我去你大爷的",
+      "src": "/audio/buttons/ruma&zanghua/我去你大爷的.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.332
+    },
+    {
+      "id": "ruma&zanghua-24",
+      "title": "我是你爹",
+      "src": "/audio/buttons/ruma&zanghua/我是你爹.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.344
+    },
+    {
+      "id": "ruma&zanghua-25",
+      "title": "打死你",
+      "src": "/audio/buttons/ruma&zanghua/打死你.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.918
+    },
+    {
+      "id": "ruma&zanghua-26",
+      "title": "有没有格局，开不起玩笑的东西",
+      "src": "/audio/buttons/ruma&zanghua/有没有格局，开不起玩笑的东西.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 3.2
+    },
+    {
+      "id": "ruma&zanghua-27",
+      "title": "有病吧",
+      "src": "/audio/buttons/ruma&zanghua/有病吧.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.862
+    },
+    {
+      "id": "ruma&zanghua-28",
+      "title": "牛不牛逼",
+      "src": "/audio/buttons/ruma&zanghua/牛不牛逼.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.175
+    },
+    {
+      "id": "ruma&zanghua-29",
+      "title": "神经",
+      "src": "/audio/buttons/ruma&zanghua/神经.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 3.8
+    },
+    {
+      "id": "ruma&zanghua-30",
+      "title": "神经吧",
+      "src": "/audio/buttons/ruma&zanghua/神经吧.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.341
+    },
+    {
+      "id": "ruma&zanghua-31",
+      "title": "神经病吧",
+      "src": "/audio/buttons/ruma&zanghua/神经病吧.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.306
+    },
+    {
+      "id": "ruma&zanghua-32",
+      "title": "绿冻本来就不是人",
+      "src": "/audio/buttons/ruma&zanghua/绿冻本来就不是人.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.045
+    },
+    {
+      "id": "ruma&zanghua-33",
+      "title": "绿冻没有自己的生活吗？",
+      "src": "/audio/buttons/ruma&zanghua/绿冻没有自己的生活吗？.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.472
+    },
+    {
+      "id": "ruma&zanghua-34",
+      "title": "脑残SC",
+      "src": "/audio/buttons/ruma&zanghua/脑残SC.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 4
+    },
+    {
+      "id": "ruma&zanghua-35",
+      "title": "脑瘫弹幕",
+      "src": "/audio/buttons/ruma&zanghua/脑瘫弹幕.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 4.3
+    },
+    {
+      "id": "ruma&zanghua-36",
+      "title": "草",
+      "src": "/audio/buttons/ruma&zanghua/草.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.679
+    },
+    {
+      "id": "ruma&zanghua-37",
+      "title": "行不行啊",
+      "src": "/audio/buttons/ruma&zanghua/行不行啊.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.216
+    },
+    {
+      "id": "ruma&zanghua-38",
+      "title": "觉得很傻狗说实话",
+      "src": "/audio/buttons/ruma&zanghua/觉得很傻狗说实话.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 2.259
+    },
+    {
+      "id": "ruma&zanghua-39",
+      "title": "跟条蛆一样废物吗",
+      "src": "/audio/buttons/ruma&zanghua/跟条蛆一样废物吗.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 5.8
+    },
+    {
+      "id": "ruma&zanghua-40",
+      "title": "你们发1的神经吧",
+      "src": "/audio/buttons/ruma&zanghua/你们发1的神经吧.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.619
+    },
+    {
+      "id": "ruma&zanghua-41",
+      "title": "我靠了我靠",
+      "src": "/audio/buttons/ruma&zanghua/我靠了我靠.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 2.491
+    },
+    {
+      "id": "ruma&zanghua-42",
+      "title": "这神经病吧我靠~我去你大爷的",
+      "src": "/audio/buttons/ruma&zanghua/这神经病吧我靠~我去你大爷的.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 3.266
+    },
+    {
+      "id": "ruma&zanghua-43",
+      "title": "你脑子有点问题，呵",
+      "src": "/audio/buttons/ruma&zanghua/你脑子有点问题，呵.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.892
+    },
+    {
+      "id": "ruma&zanghua-44",
+      "title": "你这个没用的东西",
+      "src": "/audio/buttons/ruma&zanghua/你这个没用的东西.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.477
+    },
+    {
+      "id": "ruma&zanghua-45",
+      "title": "可别给我笑死了",
+      "src": "/audio/buttons/ruma&zanghua/可别给我笑死了.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.429
+    },
+    {
+      "id": "ruma&zanghua-46",
+      "title": "恶心",
+      "src": "/audio/buttons/ruma&zanghua/恶心.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.806
+    },
+    {
+      "id": "ruma&zanghua-47",
+      "title": "懂个屁",
+      "src": "/audio/buttons/ruma&zanghua/懂个屁.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.762
+    },
+    {
+      "id": "ruma&zanghua-48",
+      "title": "我草",
+      "src": "/audio/buttons/ruma&zanghua/我草.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.74
+    },
+    {
+      "id": "ruma&zanghua-49",
+      "title": "畜生",
+      "src": "/audio/buttons/ruma&zanghua/畜生.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.75
+    },
+    {
+      "id": "ruma&zanghua-50",
+      "title": "真差劲",
+      "src": "/audio/buttons/ruma&zanghua/真差劲.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 1.16
+    },
+    {
+      "id": "ruma&zanghua-51",
+      "title": "该死~",
+      "src": "/audio/buttons/ruma&zanghua/该死~.m4a",
+      "categoryId": "ruma&zanghua",
+      "duration": 0.615
+    },
+    {
+      "id": "ruozhi-1",
+      "title": "666",
+      "src": "/audio/buttons/ruozhi/666.m4a",
+      "categoryId": "ruozhi",
+      "duration": 1.228
+    },
+    {
+      "id": "ruozhi-2",
+      "title": "可以个鬼啊",
+      "src": "/audio/buttons/ruozhi/可以个鬼啊.m4a",
+      "categoryId": "ruozhi",
+      "duration": 1.493
+    },
+    {
+      "id": "ruozhi-3",
+      "title": "呵呵",
+      "src": "/audio/buttons/ruozhi/呵呵.m4a",
+      "categoryId": "ruozhi",
+      "duration": 1.898
+    },
+    {
+      "id": "ruozhi-4",
+      "title": "哇塞，已力竭",
+      "src": "/audio/buttons/ruozhi/哇塞，已力竭.m4a",
+      "categoryId": "ruozhi",
+      "duration": 4.5
+    },
+    {
+      "id": "ruozhi-5",
+      "title": "因为14号要来收割-难绷",
+      "src": "/audio/buttons/ruozhi/因为14号要来收割-难绷.m4a",
+      "categoryId": "ruozhi",
+      "duration": 25.721
+    },
+    {
+      "id": "ruozhi-6",
+      "title": "好舒服啊，有点舒服，有点舒服了",
+      "src": "/audio/buttons/ruozhi/好舒服啊，有点舒服，有点舒服了.m4a",
+      "categoryId": "ruozhi",
+      "duration": 5.9
+    },
+    {
+      "id": "ruozhi-7",
+      "title": "希望今年能完婚早生贵子",
+      "src": "/audio/buttons/ruozhi/希望今年能完婚早生贵子.m4a",
+      "categoryId": "ruozhi",
+      "duration": 4.121
+    },
+    {
+      "id": "ruozhi-8",
+      "title": "很大喔",
+      "src": "/audio/buttons/ruozhi/很大喔.m4a",
+      "categoryId": "ruozhi",
+      "duration": 2.773
+    },
+    {
+      "id": "ruozhi-9",
+      "title": "怎么可~能",
+      "src": "/audio/buttons/ruozhi/怎么可~能.m4a",
+      "categoryId": "ruozhi",
+      "duration": 1.396
+    },
+    {
+      "id": "ruozhi-10",
+      "title": "我操宝宝原来你长这样",
+      "src": "/audio/buttons/ruozhi/我操宝宝原来你长这样.m4a",
+      "categoryId": "ruozhi",
+      "duration": 10.5
+    },
+    {
+      "id": "ruozhi-11",
+      "title": "气泡音",
+      "src": "/audio/buttons/ruozhi/气泡音.m4a",
+      "categoryId": "ruozhi",
+      "duration": 4.4
+    },
+    {
+      "id": "ruozhi-12",
+      "title": "没事吧，呵呵",
+      "src": "/audio/buttons/ruozhi/没事吧，呵呵.m4a",
+      "categoryId": "ruozhi",
+      "duration": 4
+    },
+    {
+      "id": "ruozhi-13",
+      "title": "满爸out，呵",
+      "src": "/audio/buttons/ruozhi/满爸out，呵.m4a",
+      "categoryId": "ruozhi",
+      "duration": 1.301
+    },
+    {
+      "id": "ruozhi-14",
+      "title": "疯了一样就全部都 吻 了上来",
+      "src": "/audio/buttons/ruozhi/疯了一样就全部都 吻 了上来.m4a",
+      "categoryId": "ruozhi",
+      "duration": 1.6
+    },
+    {
+      "id": "ruozhi-15",
+      "title": "直播好舒服",
+      "src": "/audio/buttons/ruozhi/直播好舒服.m4a",
+      "categoryId": "ruozhi",
+      "duration": 7.4
+    },
+    {
+      "id": "ruozhi-16",
+      "title": "裸奔的感觉",
+      "src": "/audio/buttons/ruozhi/裸奔的感觉.m4a",
+      "categoryId": "ruozhi",
+      "duration": 1.071
+    },
+    {
+      "id": "ruozhi-17",
+      "title": "那不是包的嘛",
+      "src": "/audio/buttons/ruozhi/那不是包的嘛.m4a",
+      "categoryId": "ruozhi",
+      "duration": 1.279
+    },
+    {
+      "id": "ruozhi-18",
+      "title": "他到底在沉默什么",
+      "src": "/audio/buttons/ruozhi/他到底在沉默什么.m4a",
+      "categoryId": "ruozhi",
+      "duration": 18.347
+    },
+    {
+      "id": "ruozhi-19",
+      "title": "我一直在哭，我一直在哭",
+      "src": "/audio/buttons/ruozhi/我一直在哭，我一直在哭.m4a",
+      "categoryId": "ruozhi",
+      "duration": 5.751
+    },
+    {
+      "id": "ruozhi-20",
+      "title": "不会真以为灰泽满是一个单纯小女生吧",
+      "src": "/audio/buttons/ruozhi/不会真以为灰泽满是一个单纯小女生吧.m4a",
+      "categoryId": "ruozhi",
+      "duration": 8.5
+    },
+    {
+      "id": "ruozhi-21",
+      "title": "今天这个嗓子感觉就是被车碾过了",
+      "src": "/audio/buttons/ruozhi/今天这个嗓子感觉就是被车碾过了.m4a",
+      "categoryId": "ruozhi",
+      "duration": 2.575
+    },
+    {
+      "id": "ruozhi-22",
+      "title": "好无语啊，感觉出门会创死",
+      "src": "/audio/buttons/ruozhi/好无语啊，感觉出门会创死.m4a",
+      "categoryId": "ruozhi",
+      "duration": 2.161
+    },
+    {
+      "id": "ruozhi-23",
+      "title": "看到周杰伦三个字我真的忍不住想笑",
+      "src": "/audio/buttons/ruozhi/看到周杰伦三个字我真的忍不住想笑.m4a",
+      "categoryId": "ruozhi",
+      "duration": 2.497
+    },
+    {
+      "id": "ruozhi-24",
+      "title": "零人在意 必须在意",
+      "src": "/audio/buttons/ruozhi/零人在意 必须在意.m4a",
+      "categoryId": "ruozhi",
+      "duration": 26.1
+    },
+    {
+      "id": "dongjing-1",
+      "title": "不是~不是不是不是",
+      "src": "/audio/buttons/dongjing/不是~不是不是不是.m4a",
+      "categoryId": "dongjing",
+      "duration": 2.277
+    },
+    {
+      "id": "dongjing-2",
+      "title": "可以让我走吗让我走求你",
+      "src": "/audio/buttons/dongjing/可以让我走吗让我走求你.m4a",
+      "categoryId": "dongjing",
+      "duration": 3.7
+    },
+    {
+      "id": "dongjing-3",
+      "title": "叹气-吸气",
+      "src": "/audio/buttons/dongjing/叹气-吸气.m4a",
+      "categoryId": "dongjing",
+      "duration": 1.472
+    },
+    {
+      "id": "dongjing-4",
+      "title": "吸气",
+      "src": "/audio/buttons/dongjing/吸气.m4a",
+      "categoryId": "dongjing",
+      "duration": 0.469
+    },
+    {
+      "id": "dongjing-5",
+      "title": "呃",
+      "src": "/audio/buttons/dongjing/呃.m4a",
+      "categoryId": "dongjing",
+      "duration": 1.365
+    },
+    {
+      "id": "dongjing-6",
+      "title": "呃~~",
+      "src": "/audio/buttons/dongjing/呃~~.m4a",
+      "categoryId": "dongjing",
+      "duration": 1.536
+    },
+    {
+      "id": "dongjing-7",
+      "title": "呃呃呃",
+      "src": "/audio/buttons/dongjing/呃呃呃.m4a",
+      "categoryId": "dongjing",
+      "duration": 4.8
+    },
+    {
+      "id": "dongjing-8",
+      "title": "哈哈急促，听到门铃了",
+      "src": "/audio/buttons/dongjing/哈哈急促，听到门铃了.m4a",
+      "categoryId": "dongjing",
+      "duration": 3.221
+    },
+    {
+      "id": "dongjing-9",
+      "title": "啊~",
+      "src": "/audio/buttons/dongjing/啊~.m4a",
+      "categoryId": "dongjing",
+      "duration": 0.548
+    },
+    {
+      "id": "dongjing-10",
+      "title": "啊~吸气",
+      "src": "/audio/buttons/dongjing/啊~吸气.m4a",
+      "categoryId": "dongjing",
+      "duration": 0.747
+    },
+    {
+      "id": "dongjing-11",
+      "title": "啊~泄气",
+      "src": "/audio/buttons/dongjing/啊~泄气.m4a",
+      "categoryId": "dongjing",
+      "duration": 2.707
+    },
+    {
+      "id": "dongjing-12",
+      "title": "啊，啊，啊...",
+      "src": "/audio/buttons/dongjing/啊，啊，啊....m4a",
+      "categoryId": "dongjing",
+      "duration": 3.5
+    },
+    {
+      "id": "dongjing-13",
+      "title": "啧",
+      "src": "/audio/buttons/dongjing/啧.m4a",
+      "categoryId": "dongjing",
+      "duration": 1.131
+    },
+    {
+      "id": "dongjing-14",
+      "title": "喝水声",
+      "src": "/audio/buttons/dongjing/喝水声.m4a",
+      "categoryId": "dongjing",
+      "duration": 0.704
+    },
+    {
+      "id": "dongjing-15",
+      "title": "尖叫吸气",
+      "src": "/audio/buttons/dongjing/尖叫吸气.m4a",
+      "categoryId": "dongjing",
+      "duration": 0.597
+    },
+    {
+      "id": "dongjing-16",
+      "title": "我靠我靠我靠",
+      "src": "/audio/buttons/dongjing/我靠我靠我靠.m4a",
+      "categoryId": "dongjing",
+      "duration": 33.548
+    },
+    {
+      "id": "dongjing-17",
+      "title": "扫叫1",
+      "src": "/audio/buttons/dongjing/扫叫1.m4a",
+      "categoryId": "dongjing",
+      "duration": 0.554
+    },
+    {
+      "id": "dongjing-18",
+      "title": "扫叫2",
+      "src": "/audio/buttons/dongjing/扫叫2.m4a",
+      "categoryId": "dongjing",
+      "duration": 1.834
+    },
+    {
+      "id": "dongjing-19",
+      "title": "扫叫3",
+      "src": "/audio/buttons/dongjing/扫叫3.m4a",
+      "categoryId": "dongjing",
+      "duration": 2.688
+    },
+    {
+      "id": "dongjing-20",
+      "title": "拍桌子笑声",
+      "src": "/audio/buttons/dongjing/拍桌子笑声.m4a",
+      "categoryId": "dongjing",
+      "duration": 5.021
+    },
+    {
+      "id": "dongjing-21",
+      "title": "欸等一下",
+      "src": "/audio/buttons/dongjing/欸等一下.m4a",
+      "categoryId": "dongjing",
+      "duration": 1.493
+    },
+    {
+      "id": "dongjing-22",
+      "title": "笑声",
+      "src": "/audio/buttons/dongjing/笑声.m4a",
+      "categoryId": "dongjing",
+      "duration": 2.645
+    },
+    {
+      "id": "dongjing-23",
+      "title": "等一下",
+      "src": "/audio/buttons/dongjing/等一下.m4a",
+      "categoryId": "dongjing",
+      "duration": 1.706
+    },
+    {
+      "id": "dongjing-24",
+      "title": "花枝乱颤",
+      "src": "/audio/buttons/dongjing/花枝乱颤.m4a",
+      "categoryId": "dongjing",
+      "duration": 6.2
+    },
+    {
+      "id": "dongjing-25",
+      "title": "呃啊",
+      "src": "/audio/buttons/dongjing/呃啊.m4a",
+      "categoryId": "dongjing",
+      "duration": 0.59
+    },
+    {
+      "id": "dongjing-26",
+      "title": "我靠~我靠~我不说了我真不说了",
+      "src": "/audio/buttons/dongjing/我靠~我靠~我不说了我真不说了.m4a",
+      "categoryId": "dongjing",
+      "duration": 22.049
+    },
+    {
+      "id": "dongjing-27",
+      "title": "清鼻声",
+      "src": "/audio/buttons/dongjing/清鼻声.m4a",
+      "categoryId": "dongjing",
+      "duration": 2.028
+    },
+    {
+      "id": "dongjing-28",
+      "title": "额啊~嗯",
+      "src": "/audio/buttons/dongjing/额啊~嗯.m4a",
+      "categoryId": "dongjing",
+      "duration": 2.154
+    },
+    {
+      "id": "dongjing-29",
+      "title": "吸气~啊~",
+      "src": "/audio/buttons/dongjing/吸气~啊~.m4a",
+      "categoryId": "dongjing",
+      "duration": 1.663
+    },
+    {
+      "id": "dongjing-30",
+      "title": "啊~（可爱音）",
+      "src": "/audio/buttons/dongjing/啊~（可爱音）.m4a",
+      "categoryId": "dongjing",
+      "duration": 1.327
+    },
+    {
+      "id": "dongjing-31",
+      "title": "啊~（扫叫）",
+      "src": "/audio/buttons/dongjing/啊~（扫叫）.m4a",
+      "categoryId": "dongjing",
+      "duration": 2.897
+    },
+    {
+      "id": "dongjing-32",
+      "title": "嘶呃啊",
+      "src": "/audio/buttons/dongjing/嘶呃啊.m4a",
+      "categoryId": "dongjing",
+      "duration": 5.7
+    },
+    {
+      "id": "dongjing-33",
+      "title": "小满打响指",
+      "src": "/audio/buttons/dongjing/小满打响指.m4a",
+      "categoryId": "dongjing",
+      "duration": 0.209
+    },
+    {
+      "id": "huangtao-1",
+      "title": "我直接被干死了",
+      "src": "/audio/buttons/huangtao/我直接被干死了.m4a",
+      "categoryId": "huangtao",
+      "duration": 2.688
+    },
+    {
+      "id": "huangtao-2",
+      "title": "我真的很喜欢就可以求求你给我吗",
+      "src": "/audio/buttons/huangtao/我真的很喜欢就可以求求你给我吗.m4a",
+      "categoryId": "huangtao",
+      "duration": 3.2
+    },
+    {
+      "id": "huangtao-3",
+      "title": "放学后把她叫出来，对她为所欲为",
+      "src": "/audio/buttons/huangtao/放学后把她叫出来，对她为所欲为.m4a",
+      "categoryId": "huangtao",
+      "duration": 2.264
+    },
+    {
+      "id": "huangtao-4",
+      "title": "求求你饶了我吧",
+      "src": "/audio/buttons/huangtao/求求你饶了我吧.m4a",
+      "categoryId": "huangtao",
+      "duration": 1.012
+    },
+    {
+      "id": "huangtao-5",
+      "title": "这就是灰泽满的性欲",
+      "src": "/audio/buttons/huangtao/这就是灰泽满的性欲.m4a",
+      "categoryId": "huangtao",
+      "duration": 6.7
+    },
+    {
+      "id": "huangtao-6",
+      "title": "你们想看吗？我靠",
+      "src": "/audio/buttons/huangtao/你们想看吗？我靠.m4a",
+      "categoryId": "huangtao",
+      "duration": 2.135
+    },
+    {
+      "id": "huangtao-7",
+      "title": "我体内的怪物正在越变越大",
+      "src": "/audio/buttons/huangtao/我体内的怪物正在越变越大.m4a",
+      "categoryId": "huangtao",
+      "duration": 4.12
+    },
+    {
+      "id": "huangtao-8",
+      "title": "我敢给别人超，别人敢超吗？谁敢超啊",
+      "src": "/audio/buttons/huangtao/我敢给别人超，别人敢超吗？谁敢超啊.m4a",
+      "categoryId": "huangtao",
+      "duration": 8.083
+    },
+    {
+      "id": "huangtao-9",
+      "title": "未婚夫",
+      "src": "/audio/buttons/huangtao/未婚夫.m4a",
+      "categoryId": "huangtao",
+      "duration": 0.829
+    },
+    {
+      "id": "huangtao-10",
+      "title": "机吧",
+      "src": "/audio/buttons/huangtao/机吧.m4a",
+      "categoryId": "huangtao",
+      "duration": 0.56
+    },
+    {
+      "id": "love-1",
+      "title": "一想到关播其实我很寂寞",
+      "src": "/audio/buttons/love/一想到关播其实我很寂寞.m4a",
+      "categoryId": "love",
+      "duration": 12.2
+    },
+    {
+      "id": "love-2",
+      "title": "一起鬼混到8点",
+      "src": "/audio/buttons/love/一起鬼混到8点.m4a",
+      "categoryId": "love",
+      "duration": 1.243
+    },
+    {
+      "id": "love-3",
+      "title": "亲亲抱抱举高高",
+      "src": "/audio/buttons/love/亲亲抱抱举高高.m4a",
+      "categoryId": "love",
+      "duration": 1.088
+    },
+    {
+      "id": "love-4",
+      "title": "别~不要好吗",
+      "src": "/audio/buttons/love/别~不要好吗.m4a",
+      "categoryId": "love",
+      "duration": 4.221
+    },
+    {
+      "id": "love-5",
+      "title": "别提学历好吗？我们宝宝看不得这个",
+      "src": "/audio/buttons/love/别提学历好吗？我们宝宝看不得这个.m4a",
+      "categoryId": "love",
+      "duration": 2.837
+    },
+    {
+      "id": "love-6",
+      "title": "可以求求你给我吗？这世界上所有人都吃软不吃硬的",
+      "src": "/audio/buttons/love/可以求求你给我吗？这世界上所有人都吃软不吃硬的.m4a",
+      "categoryId": "love",
+      "duration": 5.5
+    },
+    {
+      "id": "love-7",
+      "title": "大笨蛋",
+      "src": "/audio/buttons/love/大笨蛋.m4a",
+      "categoryId": "love",
+      "duration": 1.564
+    },
+    {
+      "id": "love-8",
+      "title": "安全词吗？我肯定会引导你们",
+      "src": "/audio/buttons/love/安全词吗？我肯定会引导你们.m4a",
+      "categoryId": "love",
+      "duration": 5.621
+    },
+    {
+      "id": "love-9",
+      "title": "安心发串子弹幕",
+      "src": "/audio/buttons/love/安心发串子弹幕.m4a",
+      "categoryId": "love",
+      "duration": 8.8
+    },
+    {
+      "id": "love-10",
+      "title": "宝宝",
+      "src": "/audio/buttons/love/宝宝.m4a",
+      "categoryId": "love",
+      "duration": 1.225
+    },
+    {
+      "id": "love-11",
+      "title": "已经狠狠地欺负我了",
+      "src": "/audio/buttons/love/已经狠狠地欺负我了.m4a",
+      "categoryId": "love",
+      "duration": 1.984
+    },
+    {
+      "id": "love-12",
+      "title": "想跟我度过一个夜晚吗",
+      "src": "/audio/buttons/love/想跟我度过一个夜晚吗.m4a",
+      "categoryId": "love",
+      "duration": 1.608
+    },
+    {
+      "id": "love-13",
+      "title": "我喜欢你",
+      "src": "/audio/buttons/love/我喜欢你.m4a",
+      "categoryId": "love",
+      "duration": 1.45
+    },
+    {
+      "id": "love-14",
+      "title": "我跪下来求求你了",
+      "src": "/audio/buttons/love/我跪下来求求你了.m4a",
+      "categoryId": "love",
+      "duration": 7.5
+    },
+    {
+      "id": "love-15",
+      "title": "没事吧",
+      "src": "/audio/buttons/love/没事吧.m4a",
+      "categoryId": "love",
+      "duration": 2.386
+    },
+    {
+      "id": "love-16",
+      "title": "电子宠物",
+      "src": "/audio/buttons/love/电子宠物.m4a",
+      "categoryId": "love",
+      "duration": 7.8
+    },
+    {
+      "id": "love-17",
+      "title": "真的要进来了哦",
+      "src": "/audio/buttons/love/真的要进来了哦.m4a",
+      "categoryId": "love",
+      "duration": 2.069
+    },
+    {
+      "id": "love-18",
+      "title": "绿冻是我的主人",
+      "src": "/audio/buttons/love/绿冻是我的主人.m4a",
+      "categoryId": "love",
+      "duration": 11.2
+    },
+    {
+      "id": "love-19",
+      "title": "老公",
+      "src": "/audio/buttons/love/老公.m4a",
+      "categoryId": "love",
+      "duration": 0.602
+    },
+    {
+      "id": "love-20",
+      "title": "讨厌",
+      "src": "/audio/buttons/love/讨厌.m4a",
+      "categoryId": "love",
+      "duration": 1.344
+    },
+    {
+      "id": "love-21",
+      "title": "oyasumi",
+      "src": "/audio/buttons/love/oyasumi.m4a",
+      "categoryId": "love",
+      "duration": 1.106
+    },
+    {
+      "id": "love-22",
+      "title": "哎，要现在说吗要现在说吗",
+      "src": "/audio/buttons/love/哎，要现在说吗要现在说吗.m4a",
+      "categoryId": "love",
+      "duration": 5.976
+    },
+    {
+      "id": "love-23",
+      "title": "啊~对不起对不起",
+      "src": "/audio/buttons/love/啊~对不起对不起.m4a",
+      "categoryId": "love",
+      "duration": 1.899
+    },
+    {
+      "id": "love-24",
+      "title": "我再给你们讲一个事情吧",
+      "src": "/audio/buttons/love/我再给你们讲一个事情吧.m4a",
+      "categoryId": "love",
+      "duration": 3.959
+    },
+    {
+      "id": "love-25",
+      "title": "你们患得患失什么~",
+      "src": "/audio/buttons/love/你们患得患失什么~.m4a",
+      "categoryId": "love",
+      "duration": 2.372
+    },
+    {
+      "id": "love-26",
+      "title": "可是我现在才明白 · 我唯一爱的人是你",
+      "src": "/audio/buttons/love/可是我现在才明白 · 我唯一爱的人是你.m4a",
+      "categoryId": "love",
+      "duration": 3.3
+    },
+    {
+      "id": "love-27",
+      "title": "在这里呦在这里呦",
+      "src": "/audio/buttons/love/在这里呦在这里呦.m4a",
+      "categoryId": "love",
+      "duration": 1.448
+    },
+    {
+      "id": "love-28",
+      "title": "就不告诉你",
+      "src": "/audio/buttons/love/就不告诉你.m4a",
+      "categoryId": "love",
+      "duration": 1.191
+    },
+    {
+      "id": "love-29",
+      "title": "弹幕老公",
+      "src": "/audio/buttons/love/弹幕老公.m4a",
+      "categoryId": "love",
+      "duration": 1.019
+    },
+    {
+      "id": "love-30",
+      "title": "拜拜",
+      "src": "/audio/buttons/love/拜拜.m4a",
+      "categoryId": "love",
+      "duration": 1.481
+    },
+    {
+      "id": "love-31",
+      "title": "爸爸",
+      "src": "/audio/buttons/love/爸爸.m4a",
+      "categoryId": "love",
+      "duration": 0.665
+    },
+    {
+      "id": "love-32",
+      "title": "祝你生日快乐~",
+      "src": "/audio/buttons/love/祝你生日快乐~.m4a",
+      "categoryId": "love",
+      "duration": 3.6
+    },
+    {
+      "id": "love-33",
+      "title": "这个人是我们直播间的例外哦~",
+      "src": "/audio/buttons/love/这个人是我们直播间的例外哦~.m4a",
+      "categoryId": "love",
+      "duration": 1.759
+    },
+    {
+      "id": "duixian-1",
+      "title": "不想当我主人就算了",
+      "src": "/audio/buttons/duixian/不想当我主人就算了.m4a",
+      "categoryId": "duixian",
+      "duration": 1.557
+    },
+    {
+      "id": "duixian-2",
+      "title": "今天灰泽满没有迟到呢，气不气",
+      "src": "/audio/buttons/duixian/今天灰泽满没有迟到呢，气不气.m4a",
+      "categoryId": "duixian",
+      "duration": 4.6
+    },
+    {
+      "id": "duixian-3",
+      "title": "你们今天可以大方发了。我叫你们发你们还真发呀？",
+      "src": "/audio/buttons/duixian/你们今天可以大方发了。我叫你们发你们还真发呀？.m4a",
+      "categoryId": "duixian",
+      "duration": 16.9
+    },
+    {
+      "id": "duixian-4",
+      "title": "你们应该也串累了吧",
+      "src": "/audio/buttons/duixian/你们应该也串累了吧.m4a",
+      "categoryId": "duixian",
+      "duration": 5.6
+    },
+    {
+      "id": "duixian-5",
+      "title": "公式化的绿冻",
+      "src": "/audio/buttons/duixian/公式化的绿冻.m4a",
+      "categoryId": "duixian",
+      "duration": 25.599
+    },
+    {
+      "id": "duixian-6",
+      "title": "弹幕在跟谁说话",
+      "src": "/audio/buttons/duixian/弹幕在跟谁说话.m4a",
+      "categoryId": "duixian",
+      "duration": 17.2
+    },
+    {
+      "id": "duixian-7",
+      "title": "弹幕没什么可以回的",
+      "src": "/audio/buttons/duixian/弹幕没什么可以回的.m4a",
+      "categoryId": "duixian",
+      "duration": 5.2
+    },
+    {
+      "id": "duixian-8",
+      "title": "弹幕非常的不乖",
+      "src": "/audio/buttons/duixian/弹幕非常的不乖.m4a",
+      "categoryId": "duixian",
+      "duration": 17.4
+    },
+    {
+      "id": "duixian-9",
+      "title": "强制回复",
+      "src": "/audio/buttons/duixian/强制回复.m4a",
+      "categoryId": "duixian",
+      "duration": 8.1
+    },
+    {
+      "id": "duixian-10",
+      "title": "想不想我明天来直播了",
+      "src": "/audio/buttons/duixian/想不想我明天来直播了.m4a",
+      "categoryId": "duixian",
+      "duration": 4.7
+    },
+    {
+      "id": "duixian-11",
+      "title": "我我说了才要发散吧",
+      "src": "/audio/buttons/duixian/我我说了才要发散吧.m4a",
+      "categoryId": "duixian",
+      "duration": 2.997
+    },
+    {
+      "id": "duixian-12",
+      "title": "早就说过不爱了",
+      "src": "/audio/buttons/duixian/早就说过不爱了.m4a",
+      "categoryId": "duixian",
+      "duration": 1.032
+    },
+    {
+      "id": "duixian-13",
+      "title": "是给我交的朋友费是吗",
+      "src": "/audio/buttons/duixian/是给我交的朋友费是吗.m4a",
+      "categoryId": "duixian",
+      "duration": 10.4
+    },
+    {
+      "id": "duixian-14",
+      "title": "没有after care的话",
+      "src": "/audio/buttons/duixian/没有after care的话.m4a",
+      "categoryId": "duixian",
+      "duration": 9.8
+    },
+    {
+      "id": "duixian-15",
+      "title": "灰泽满就是废物满不满意",
+      "src": "/audio/buttons/duixian/灰泽满就是废物满不满意.m4a",
+      "categoryId": "duixian",
+      "duration": 4.3
+    },
+    {
+      "id": "duixian-16",
+      "title": "灰泽满的世界没有跟男的对视过",
+      "src": "/audio/buttons/duixian/灰泽满的世界没有跟男的对视过.m4a",
+      "categoryId": "duixian",
+      "duration": 4.2
+    },
+    {
+      "id": "duixian-17",
+      "title": "看你们急得",
+      "src": "/audio/buttons/duixian/看你们急得.m4a",
+      "categoryId": "duixian",
+      "duration": 2.406
+    },
+    {
+      "id": "duixian-18",
+      "title": "看你们表现吧",
+      "src": "/audio/buttons/duixian/看你们表现吧.m4a",
+      "categoryId": "duixian",
+      "duration": 1.088
+    },
+    {
+      "id": "duixian-19",
+      "title": "闹麻了闹麻了",
+      "src": "/audio/buttons/duixian/闹麻了闹麻了.m4a",
+      "categoryId": "duixian",
+      "duration": 1.306
+    },
+    {
+      "id": "duixian-20",
+      "title": "你们再给我发散出别的理由试试看",
+      "src": "/audio/buttons/duixian/你们再给我发散出别的理由试试看.m4a",
+      "categoryId": "duixian",
+      "duration": 2.328
+    },
+    {
+      "id": "duixian-21",
+      "title": "你装什么呢",
+      "src": "/audio/buttons/duixian/你装什么呢.m4a",
+      "categoryId": "duixian",
+      "duration": 1.1
+    },
+    {
+      "id": "duixian-22",
+      "title": "我靠~你们真闹麻了",
+      "src": "/audio/buttons/duixian/我靠~你们真闹麻了.m4a",
+      "categoryId": "duixian",
+      "duration": 7.446
+    },
+    {
+      "id": "misc-1",
+      "title": "串子VS暖男 串子",
+      "src": "/audio/buttons/misc/串子VS暖男 串子.m4a",
+      "categoryId": "misc",
+      "duration": 4.5
+    },
+    {
+      "id": "misc-2",
+      "title": "其实直播对我来说",
+      "src": "/audio/buttons/misc/其实直播对我来说.m4a",
+      "categoryId": "misc",
+      "duration": 7.5
+    },
+    {
+      "id": "misc-3",
+      "title": "如果今天真的爆了的话",
+      "src": "/audio/buttons/misc/如果今天真的爆了的话.m4a",
+      "categoryId": "misc",
+      "duration": 9
+    },
+    {
+      "id": "misc-4",
+      "title": "很难做人",
+      "src": "/audio/buttons/misc/很难做人.m4a",
+      "categoryId": "misc",
+      "duration": 4.821
+    },
+    {
+      "id": "misc-5",
+      "title": "我一直在哭",
+      "src": "/audio/buttons/misc/我一直在哭.m4a",
+      "categoryId": "misc",
+      "duration": 1.149
+    },
+    {
+      "id": "misc-6",
+      "title": "是吗也还好吧",
+      "src": "/audio/buttons/misc/是吗也还好吧.m4a",
+      "categoryId": "misc",
+      "duration": 25.7
+    },
+    {
+      "id": "misc-7",
+      "title": "自由搏击吧",
+      "src": "/audio/buttons/misc/自由搏击吧.m4a",
+      "categoryId": "misc",
+      "duration": 0.99
+    },
+    {
+      "id": "misc-8",
+      "title": "观众之下",
+      "src": "/audio/buttons/misc/观众之下.m4a",
+      "categoryId": "misc",
+      "duration": 14.5
+    },
+    {
+      "id": "misc-9",
+      "title": "结束了",
+      "src": "/audio/buttons/misc/结束了.m4a",
+      "categoryId": "misc",
+      "duration": 1.438
+    },
+    {
+      "id": "misc-10",
+      "title": "该死",
+      "src": "/audio/buttons/misc/该死.m4a",
+      "categoryId": "misc",
+      "duration": 0.477
+    },
+    {
+      "id": "misc-11",
+      "title": "做主播算什么勤工俭学闹麻了",
+      "src": "/audio/buttons/misc/做主播算什么勤工俭学闹麻了.m4a",
+      "categoryId": "misc",
+      "duration": 6.459
+    },
+    {
+      "id": "misc-12",
+      "title": "我觉得只有稳才是可以活到最后的关键",
+      "src": "/audio/buttons/misc/我觉得只有稳才是可以活到最后的关键.m4a",
+      "categoryId": "misc",
+      "duration": 4.96
+    },
+    {
+      "id": "misc-13",
+      "title": "草管人命",
+      "src": "/audio/buttons/misc/草管人命.m4a",
+      "categoryId": "misc",
+      "duration": 1.638
+    },
+    {
+      "id": "misc-14",
+      "title": "太盛则折太弱则泻",
+      "src": "/audio/buttons/misc/太盛则折太弱则泻.m4a",
+      "categoryId": "misc",
+      "duration": 2.103
+    },
+    {
+      "id": "misc-15",
+      "title": "我康康",
+      "src": "/audio/buttons/misc/我康康.m4a",
+      "categoryId": "misc",
+      "duration": 0.633
+    },
+    {
+      "id": "misc-16",
+      "title": "我现在真的累了",
+      "src": "/audio/buttons/misc/我现在真的累了.m4a",
+      "categoryId": "misc",
+      "duration": 1.713
+    },
+    {
+      "id": "misc-17",
+      "title": "是容是收是含，含而化之",
+      "src": "/audio/buttons/misc/是容是收是含，含而化之.m4a",
+      "categoryId": "misc",
+      "duration": 3.7
+    },
+    {
+      "id": "misc-18",
+      "title": "结局（气急败坏）",
+      "src": "/audio/buttons/misc/结局（气急败坏）.m4a",
+      "categoryId": "misc",
+      "duration": 15.7
+    },
+    {
+      "id": "misc-19",
+      "title": "这个东西，不会真以为我会读吧？",
+      "src": "/audio/buttons/misc/这个东西，不会真以为我会读吧？.m4a",
+      "categoryId": "misc",
+      "duration": 4
+    }
+  ],
+  "quotes": [
+    "巴哥动感地带代言就算了能不能别一直打电话耗大家的话费啊😅",
+    "这个直播间这么多带节奏的,看了一眼,果然是那个人没开播。",
+    "如果你觉得你特别喜欢 hzm,那你可能还没入脑。如果你觉得你有点喜欢也没那么喜欢,那你这辈子算完了",
+    "那个扎啤灰泽满见绿冻就特么抄个豇豆手",
+    "[灰泽满Hazel]在11/18 20:08:20更改了直播标题:\n聊一会儿 -> 虚弱聊一会儿",
+    "喝喝,卖完惨再开播,娘养两句“为了绿冻”又能在注水日爆大米,灰泽满你个心机婊🙄",
+    "不是,xbt有这种好东西都藏着掖着不分享是吧\n今天第一次看老弥健身环,之前看过一些liver健身环,都是千篇一律的故作姿态的呻吟,让我对这个节目都有些梁木了。结果今天没事干点进老弥直播间,刚进去就响起一阵杀猪式的喘息,听的我直流口水。\n因为我知道今年过年的年猪肉质得有多紧实弹牙",
+    "挂条krd@灰泽满hazel",
+    "灰泽满一出道,这个世界开始不对劲了。。。",
+    "灰泽满❤️林嘉宇",
+    "满姐,再确认一下这次发唱的耐听的还是送20000块现金、iPhone18pro、一千股英伟达股票和枪神9吗?",
+    "煮饭婆喜怎么这么多,灰泽满我真是惯着你了,赶紧丨去厨房给我做饭,穿上围裙,外套不许穿内衣也不许穿,然后假装切到手喊我过去!",
+    "不要小博兔了😢不要小博兔了😭不要小博兔了😢不要小博兔了😭不要小博兔了😢",
+    "你们又不是弥月这样的高手,稳着打也正常,像弥月这样的肯定要走主播打法啊",
+    "灰泽满其实本来也还好,但自从她玩个游戏拿了小学五年级期末考第一之后她人就有点不对",
+    "灰泽满其实本来也还好,但自从有人给她做了一个那个神蛆化龙的短剧之后她人就有点不对劲了",
+    "灰泽满人生中从来没拿过第一你们就让让她呗",
+    "没有公式弹幕的灰泽满直播间就是边缘行者1和边缘行者2的区别。。。",
+    "确实纯良吧,也就接龙18位uid,造主播黄桃,谜语暗示辣个,开盒举报同担,恶意炒作同期后辈,连刷弹窗表情这些,除此以外我觉得我是好绿冻",
+    "满区原话:开始思索育儿经...[兔子][猪头][卡皮巴拉]",
+    "谁在打我?怎么我一直在掉血?哦,我忘记吃东西了",
+    "满神左手一直拿个沙子是为了让直播间对称吗",
+    "🐱:🙄",
+    "满神别念了,我头顶锡纸帽缩的好紧",
+    "太魂了",
+    "liko经营这么久的弱智人设被同期摘桃子了",
+    "论战前你不得不承认的事实 金毛智力>灰泽满➕kly",
+    "🔮天哪灰泽满你的调频师太有用了😱,我们冷战这么久🥶居然让我主动向你提出和好了😵我宣布现在开始我是你的追随者宝贝🧎🏻",
+    "首页来的\n这v有点路边了,她要不带米节奏我都不知道她,从来没刷到过任何切片也没听说过",
+    "高音稳得像珠穆朗玛峰🗻🔥低音炮震得我心脏在蹦迪!💓转音丝滑得能拌意大利面了!🍝✨",
+    "佐藤健:还在装松弛?",
+    "这个人又在这装松弛了",
+    "吃完饭瘫坐在沙发里好舒服啊...所以19:30再来 我再瘫会儿[UP_1298779265_喵]",
+    "一几一几又迟到喽",
+    "哎呀你女儿长的好像你啊\n满妈:别别别",
+    "喜欢主播,始于颜值,陷于才华,忠于人品,斩于厨房,烹于灶台,尝于餐桌,卡于牙缝,止于马桶",
+    "如果你觉得一直嘲笑一个名为兔川弥月、(30-12)岁家里蹲博士、游戏ID“爱莉希雅的狗”、以死亡51次的成绩拿下社内对阵阿花最高死亡记录、被困在电梯、分不清前后左右、百分百吃红光、按不出qte、这把真的不一样了(每一把)、只有六点快下班才能发挥真正实力的🐷头很有趣的话,你可以继续。",
+    "我下载了你们天天说的那个什么零看到了那个穿黑衣服带面罩的那个什么丹怎么是个大雷女",
+    "灰泽满真是神人,既没天赋又不想努力,幻想有个好老师就能变身做题龙",
+    "满神确实有后v圈时代集大成者的味道,所有要素都落实的恰到好处。可能和满神本身的成长轨迹就高度纠缠于v圈的原因,彻底被腌入味了。换句话来说,可以将满神理解成v圈本体的神格夺舍了她自身的个人意志,化身人类降临到了三次元。上一个类似的v是奶绿,但是奶绿的大妈味太足了,更像是窃取神格的人类。满神本身就是神。",
+    "你们这些嘲笑的,等别人都通关了弥月还在直播间等你们的时候你就知道弥月的好了",
+    "一则插曲:\n(刚睡醒很饿的问女室友)\nhzm:今天想吃什么\n她:这家吧\nhzm:这家这么贵\n她:没事啊我请\nhzm:??\n她:我生日啊\n*滑跪了其实是牢记在心只是没注意是今天🧎‍♀️吃完大餐回来直播w",
+    "唔,肚肚痛😣唔,肚肚痛😣唔,肚肚痛😣唔,肚肚痛😣唔,肚肚痛😣唔,肚肚痛",
+    "别重复刷屏行吗,刷一两遍就行了又不是看不到,你这样捣乱只会影响其他人的刷屏体验",
+    "不是,刷几次不就够了?为啥一直刷?有病吧?烦不烦?烦的+1",
+    "༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙༙——钓小弥",
+    "不行抽个6+5武藏吧 肯定过了",
+    "搞半天就杀了40个,40小戮闹麻了",
+    "迷信TV",
+    "又是类小路泥。。。又是类小路泥。。。又是类小路泥。。。",
+    "弥大姐,我看你直播3年一次奖都没中,只有下了一页的三无手游和每天的诈骗电话。。",
+    "比起小弥一巴掌拍死蟑螂,我更好奇蟑螂能爬到小弥腿上是什么情况😰",
+    "玩蟑螂丶Mizuki",
+    "弥月的手和脚你们舔吧,一舔一个康复新液",
+    "躺在床上莫名又會想人為了獲得幸福要付出多少呢到底值不值得呢",
+    "确实爽,直播间一起骂芭比三观不正的时候我舒服极了",
+    "v圈节奏这么多,守在hzm直播间安静欺负小满好舒服啊",
+    "回复晚安动态的是考子\n不回复的是过于害羞扭扭捏捏不想被瑞戳穿的隐形考子",
+    "区别对待是肯定的,我刷了100条掉钱眼里了她没嗦过一下,白字说个不谢灯牌过呼吸了",
+    "大家车的正高兴呢,你发动态不是捣乱吗",
+    "啊啊啊啊?!发错周表版本了对不起啊🧎♀️我说怎么会有人问是不是睡着了",
+    "绿冻真可怜,直播没有,补偿没有,连万楼也没有了🤭",
+    "继续车别停🚗继续车别停🚗继续车别停🚗继续车别停🚗继续车别停🚗继续车别停🚗继续车别停🚗",
+    "这简直就是一个万楼邀请函!这简直就是一个万楼邀请函!这简直就是一个万楼邀请函!",
+    "恭喜灰泽满Hazel在#不准时挑战#活动中获得1点积分,本周已累计1点厕纸进度",
+    "想要占据你~占据你的美💃",
+    "—几—几,演讲结束的低气压小女友来咯",
+    "梗小鬼和梗老鬼",
+    "本质灰泽满在给一种过客感,就像你的小女友只是对你有好感但是你真的特别爱她,就会不自觉产生依赖和自我规训\n省流:绿冻已经是hzm的狗了😊,狗是没法决定主人会不会离他而去的",
+    "弹幕全都是嘲讽与谩骂,只有我在默默支持你,加油,没用的东西",
+    "liko: 你要到点水不,我给你倒点\n东爱离:那你倒点\nliko: (往自己水杯注水loding)\n东爱离:?\nliko: 噢噢,我寻思我杯子里没水我倒点",
+    "我感觉现在发个一千块的晚安会很帅",
+    "点赞机器人只用点几百条,在这念晚安念到力竭,小满你后不后悔🤣",
+    "VR.Hazel:👀🐜🆚🐜,🤭🤭🤭🤭",
+    "我看你就是想收钢镚了 hzm你这个臭拜金女",
+    "我前两年看日v过的都是什么苦日子啊 1月份来看满满真的好幸福😭😭😭😭",
+    "忧郁绿冻代入中",
+    "✨\\小满/✨\\小满/✨\\小满/✨\\小满/✨\\小满/✨",
+    "听得🔑耐听得🔑耐听得🔑耐听得🔑耐听得🔑耐听得🔑耐听得🔑耐听得🔑",
+    "好听的🔑好听的🔑好听的🔑好听的🔑好听的🔑好听的🔑",
+    "舒服者耍起了",
+    "灰泽满看了某个同事的经历是不是觉得自己直播的特别成功啊,都开始分享直播心得了。",
+    "请VR无条件把积分归还灰泽满😠",
+    "满神首创卫生巾型射手,垫底吸血吹逼",
+    "灰泽满带你认识一般普遍自信电竞女的一局:轮椅、逛街、秀皮肤,看戏、解说、造奶茶",
+    "就是有这种捧杀的SC,才导致VR出来这么多白银局的主播",
+    "大家都跳的不错,老弥跳的也算个东西\n\n中途老弥都追上拍子了,然后跳着跳着又慢半拍\n\n弹幕说有三个人里有两个人跳的很好,灰泽满说别带老弥节奏\n\n不敢想3D结束以后老弥的动捕服有多好闻了",
+    "灰泽满做空澳币害久留美破产",
+    "看到没又被她们欺负了吧🤭看到没又被她们欺负了吧🤭看到没又被她们欺负了吧🤭",
+    "老弥每天这么快乐的秘诀就是会突然说一些啥比话把自己逗乐半天",
+    "我发现当主播的爸爸粉好爽,这样小男友曝光的话他也得喊我爹",
+    "可是女朋友唱歌就是比大明星好听啊",
+    "可是冰上在这不停叭叭叭😅也太可爱了吧🥺",
+    "不要拿所谓的令人作呕“深情”给你的精神病般的越界偏执行为镀金。",
+    "老弥现在对沙县的维护仅限于口头上,决计不会再吃一次,像极了那些断崖式分手情侣,要分开前的最后体面",
+    "90分钟2唱2袅1视频",
+    "几个眼珠子(噫好恶心不给你们看了)\n男大掏粪坑(你们想不想看啊给你们偷看一下)",
+    "你为什么要笑😢,克罗雅🥺,克罗雅煮的🍜,克罗雅煮的软烂面条🍲,陪伴克罗雅🤍,陪伴克罗雅度过了🌙,在英国🇬🇧的,漫长的四五年⏳,呜呜呜😭,在寒冷的英国❄️,克罗雅都是吃克罗雅煮的软烂面条🍜过的,呜呜呜呜呜😭😭😭😭",
+    "⚠️前方満能⚠️ ⚠️前方満能⚠️⚠️前方満能⚠️ ⚠️前方満能⚠️",
+    "玩的一坨史也有4700人在看?绿冻是什么厌蠢症耐受群体吗",
+    "文耀:你们看直播就叫看直播,我看就叫窥屏?",
+    "有没有那种一边玩恐怖游戏一边搜攻略还要嘴硬说攻略就是这么写的自己没错的主播推荐",
+    "小满只是在享受被男生追的感觉...小满只是在享受被男生追的感觉...",
+    "灰泽满:这真的很难,要同时按两个键...",
+    "你们觉得灰泽满很蠢而我只会觉得小女友玩游戏很可爱......这就是我们的差距",
+    "肯定是乌鸦啊,巴哥我能不知道长什么样吗",
+    "🐷回来啦啦🥰🐷🐷好想你🥰🥰🐷回来啦啦🥰🐷🐷好想你🥰🥰",
+    "你们就继续这样刷dlc吧,到时候我弥爹回来说自己摔倒了,看你们愧疚不愧疚吧",
+    "🚽:拉呀拉呀,使劲拉呀",
+    "uu们右上角免费的举报点一点 就选录像挂播",
+    "🙋🏻♂️报告老弥,有人刷那个东西",
+    "弥月就继续像这样努力直播吧,你一定能上mixup",
+    "我去,不会是内阁男友来了吧😱😱😱我去,不会是内阁男友来了吧😱😱😱",
+    "够巴",
+    "前方巴能",
+    "灰泽满的智商我很怕",
+    "奶龙女室友能偷偷拍一下她的肩膀吗,收到请回复收到",
+    "hzm:我知道很多观众按周表安排自己的生活啊虽然我也不知道你们为什么这么考🤷♀️",
+    "耐听的🔑耐听的🔑耐听的🔑耐听的🔑耐听的🔑耐听的🔑耐听的🔑耐听的🔑",
+    "弥神这是疯狂水世界吗 我看也是三分钟一把就是不怎么爽也不怎么解压",
+    "小灰猫唱的好听的🔑好听的🔑.....不行....我只爱雨纪!\n臭灰色唱的难听的🔑难听的🔑",
+    "老弥:啊,土豆吗🤭哈哈哈哈哈哈这个不好吧哈哈哈哈哈哈",
+    "【chu2u】羽爱💜🤍💚\n懂你意思,三理❤️羽啾❤️小松绿",
+    "最好的287:💜(枝堇)🤍(羽啾)💚(小松绿)🖤(花礼)",
+    "小弥别离开我😭小弥别离开我😭小弥别离开我😭小弥别离开我😭小弥别离开我😭",
+    "kly:你们都说爆了,我还以为是维阿哪个前辈力气太大把刹车踩断了",
+    "摸呀🫳🐖摸呀🫳🐖快摸呀🫳🐖使劲摸呀🫳🐖",
+    "小弥居然是最聪明的,这太ooc了,对我的世界观造成了极大冲击",
+    "怎每人无?怎每人无?怎每人无?怎每人无?怎每人无?怎每人无?",
+    "克罗雅就是只会说英语的弥月😓十六萤就是不会说日语的弥月😄",
+    "原来够弥是在夸克罗雅😓原来够弥是在夸克罗雅😓",
+    "要不说你能当弥月老伴呢👍要不说你能当弥月老伴呢👍要不说你能当弥月老伴呢👍",
+    "平时装iceb你们还真信了,这是我们mizuki娘养的手法罢了知道不",
+    "你们三个又不是liko那种高智商,就玩得稳点呗...",
+    "一个扇巴掌,一个扔酒瓶,一个字正腔圆骂sb,太姐妹情深了",
+    "弥月(三十岁喜欢指挥的猪)"
+  ]
+}

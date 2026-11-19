@@ -85,15 +85,18 @@ showMockupStage: false,        // 设为 false 隐藏产品实机视窗展台（
 showFuturePlaceholder: false,  // 设为 false 隐藏“更多生态正在孵化”卡片
 ```
 
-### 4. 吉祥物 / 看板娘台词配置 (`src/config/mascot.ts`)
-- **本地修改**：直接在 `src/config/mascot.ts` 中的 `defaultMascotQuotes` 数组里增加语句。
-- **Cloudflare Pages 环境变量修改（推荐，无需改代码）**：
-  在 Cloudflare Pages 项目后台进入 **Settings** $\rightarrow$ **Environment variables**，添加变量：
-  * **变量名**：`PUBLIC_MASCOT_QUOTES`
-  * **变量值**：支持每行一句、或以分号 `;` / 竖线 `|` 隔开、或标准 JSON 数组。
-  * 保存后在 Deployments 页面点击 **Retry deployment**（重试部署）即可生效。
-- **免构建热更新（可选）**：
-  在 `src/config/mascot.ts` 中配置 `remoteQuotesUrl` 为你的 Cloudflare Worker / KV / JSON 接口，前端加载时会自动拉取合并新词。
+### 4. 吉祥物 / 看板娘台词与语音配置 (`src/config/mascot.ts`)
+- **双模运作（在线优先 + 本地兜底）**：
+  * **在线实时反代**：部署到 Cloudflare Pages 时，会自动启用 `functions/meme/random.ts` 边缘函数，实时拉取 `https://sbhzm.cn/` 当天最新发布的烂梗（走专用 `/meme/random` 路由，彻底避开默认 `/api/` 缓存规则）。
+  * **本地全量兜底**：内置 **191 条全量语音** 与 **136 条精选经典烂梗**（位于 `src/data/sbhzm-fallback.json`），0 延迟瞬时加载，断网或离线秒级回退。
+  * **点击发声**：点击看板娘随机播放语音（包含语音标题动态提示），音量严格设为 **50%**。
+  * **一键更新词库与语音**：可在终端运行 `npm run update:sbhzm` 自动爬取同步最新数据。
+- **公共 API 开放接口 (`GET /meme/random`)**：
+  * 支持跨域 CORS (`*`)，彻底绕开 `/api/` 缓存，可供手机端 App、小程序或外部系统随时调用：
+  * 返回格式：`{ "quote": "语录文本", "voice": { "title": "...", "url": "https://..." }, "volume": 0.5 }`
+- **Cloudflare Pages 环境变量修改**：
+  若在 Cloudflare Pages 设置了 `PUBLIC_MASCOT_QUOTES`，优先展示您自定义的专属台词。
+
 
 ---
 
@@ -109,9 +112,9 @@ showFuturePlaceholder: false,  // 设为 false 隐藏“更多生态正在孵化
 | **`PUBLIC_BACKUP_URL`** | **官方备用线路** | `https://bakasine.eu.org/`（自动同步备用线路列表与卡片按钮） |
 | **`PUBLIC_BACKUP_LINES`** | **全量自定义线路列表** | 支持每行一条 `线路名称\|链接`，或者 JSON 数组（随时追加第3条、第4条线路） |
 | **`PUBLIC_APP_DOWNLOAD_URL`** | **客户端下载地址** | `https://github.com/uerax/zakoway/releases` |
-| **`PUBLIC_SITE_TITLE`** | **网站页面标题** | `ZAKOWAY - 扎口动漫 在线播放 ｜ 高清追番` |
+| **`PUBLIC_SITE_TITLE`** | **网站页面标题** | `扎口动漫 - 在线播放与客户端下载 ｜ 高清追番` |
 | **`PUBLIC_SITE_DESCRIPTION`**| **网站 SEO 描述** | 自定义搜索引擎展示简介 |
-| **`PUBLIC_BRAND_NAME`** | **品牌名称** | `ZAKOWAY` |
+| **`PUBLIC_BRAND_NAME`** | **品牌名称** | `扎口动漫` |
 | **`PUBLIC_BRAND_SLOGAN`** | **Hero 首页标语** | `连接你的 二次元世界` |
 | **`PUBLIC_BRAND_DESCRIPTION`**| **Hero 介绍文案** | `在线弹幕追番平台，支持在线观看...` |
 | **`PUBLIC_PILL_TEXT`** | **首页徽章文字** | `官方认证` 或 `2026 最新线路` |

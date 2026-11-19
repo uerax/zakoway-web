@@ -113,9 +113,9 @@ const envAppDownloadUrl = getEnv('PUBLIC_APP_DOWNLOAD_URL', 'https://github.com/
 const envTelegramUrl = getEnv('PUBLIC_TELEGRAM_URL', 'https://t.me/zakoway_chat');
 const envGithubUrl = getEnv('PUBLIC_GITHUB_URL', 'https://github.com/uerax');
 
-const envSiteTitle = getEnv('PUBLIC_SITE_TITLE', 'ZAKOWAY - 扎口动漫 在线播放与客户端下载 ｜ 高清追番·弹幕·视频超分');
-const envSiteDescription = getEnv('PUBLIC_SITE_DESCRIPTION', 'ZAKOWAY 官方发布页与主导航。提供 扎口动漫 Web 网页端在线追番与 Zakoway 多平台客户端下载。支持多视频源聚合、实时弹幕播放、WebGPU 画质超分、智能跳过 OP/ED 与去广告切片，随时获取最新可用域名与更新通道。');
-const envBrandName = getEnv('PUBLIC_BRAND_NAME', 'ZAKOWAY');
+const envSiteTitle = getEnv('PUBLIC_SITE_TITLE', '扎口动漫 - 在线播放与客户端下载 ｜ 高清追番·弹幕·视频超分');
+const envSiteDescription = getEnv('PUBLIC_SITE_DESCRIPTION', '扎口动漫 官方发布页与主导航。提供 扎口动漫 Web 网页端在线追番与 Zakoway 多平台客户端下载。支持多视频源聚合、实时弹幕播放、WebGPU 画质超分、智能跳过 OP/ED 与去广告切片，随时获取最新可用域名与更新通道。');
+const envBrandName = getEnv('PUBLIC_BRAND_NAME', '扎口动漫');
 const envBrandSlogan = getEnv('PUBLIC_BRAND_SLOGAN', '连接你的 二次元世界');
 const envBrandDescription = getEnv('PUBLIC_BRAND_DESCRIPTION', '在线弹幕追番平台，支持在线观看，支持弹幕播放，支持 OP / ED 自动跳过。');
 const envPillText = getEnv('PUBLIC_PILL_TEXT', '官方认证');

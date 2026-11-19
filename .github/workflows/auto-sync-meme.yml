@@ -1,0 +1,28 @@
+name: Auto Sync Memes and Voices
+
+on:
+  schedule:
+    # 每周一与周五 UTC 00:00 (北京时间早上 8:00) 自动检查同步
+    - cron: '0 0 * * 1,5'
+  workflow_dispatch: # 支持在 GitHub 网页上手动一键点击触发
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Incremental Sync
+        run: node scripts/sync-sbhzm.mjs
+
+      - name: Commit & Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-sync latest sbhzm voices and memes"
+          file_pattern: "public/audio/** src/data/sbhzm-fallback.json"
