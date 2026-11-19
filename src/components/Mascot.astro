@@ -1,0 +1,123 @@
+---
+// Mascot.astro - 右下角固定二次元看板娘组件
+import { getMascotQuotes, mascotConfig } from '../config/mascot';
+
+const quotes = getMascotQuotes();
+const quotesJson = JSON.stringify(quotes);
+const { avatar = '/mascot.png', remoteQuotesUrl = '', enabled = true } = mascotConfig;
+
+if (!enabled) {
+  return null;
+}
+---
+
+<div
+  id="site-mascot-container"
+  class="fixed bottom-0 right-0 z-30 pointer-events-none select-none flex flex-col items-end justify-end group"
+  aria-label="扎口动漫吉祥物"
+  data-quotes={quotesJson}
+  data-remote-url={remoteQuotesUrl}
+>
+  <!-- 对话气泡 (点击触发) -->
+  <div
+    id="mascot-dialog"
+    class="opacity-0 translate-y-2 pointer-events-none transition-all duration-300 ease-out mr-4 sm:mr-8 mb-1 max-w-[180px] sm:max-w-[220px] px-3 py-2 rounded-2xl rounded-br-sm bg-[var(--bg-surface)] border border-[var(--accent-cyan)] shadow-[0_8px_24px_rgba(0,242,254,0.25)] backdrop-blur-md text-[var(--text-main)] text-xs font-medium leading-relaxed"
+    role="status"
+    aria-live="polite"
+  >
+    <span id="mascot-text">{quotes[0] || '今天也要开心追番哦！✨'}</span>
+  </div>
+
+  <!-- 看板娘形象 -->
+  <div class="relative flex items-end justify-end overflow-visible pointer-events-auto cursor-pointer">
+    <img
+      id="mascot-img"
+      src={avatar}
+      alt="扎口动漫 看板娘"
+      width="682"
+      height="1024"
+      loading="eager"
+      decoding="async"
+      class="w-24 sm:w-32 md:w-40 lg:w-44 h-auto max-h-[30vh] sm:max-h-[36vh] object-contain object-bottom-right drop-shadow-[0_4px_16px_rgba(0,0,0,0.35)] transform-gpu transition-all duration-300 hover:scale-[1.04] active:scale-95 animate-mascot-peek"
+    />
+  </div>
+</div>
+
+<style>
+  @keyframes mascot-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .animate-mascot-peek {
+    animation: mascot-float 4s ease-in-out infinite;
+  }
+
+  /* 触摸或悬浮时微动停顿 */
+  #site-mascot-container:hover .animate-mascot-peek {
+    animation-play-state: paused;
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    const container = document.getElementById('site-mascot-container');
+    const dialog = document.getElementById('mascot-dialog');
+    const textEl = document.getElementById('mascot-text');
+    const mascotImg = document.getElementById('mascot-img');
+
+    if (!container || !dialog || !textEl || !mascotImg) return;
+
+    let quotes = [];
+    try {
+      quotes = JSON.parse(container.getAttribute('data-quotes') || '[]');
+    } catch(e) {}
+
+    if (!Array.isArray(quotes) || quotes.length === 0) {
+      quotes = ['扎口动漫，高清追番不迷路！✨'];
+    }
+
+    // 可选：远程热更新词库（免构建即时生效）
+    const remoteUrl = container.getAttribute('data-remote-url');
+    if (remoteUrl) {
+      fetch(remoteUrl)
+        .then((res) => res.json())
+        .then((remoteData) => {
+          if (Array.isArray(remoteData) && remoteData.length > 0) {
+            // 合并去重
+            const merged = Array.from(new Set([...quotes, ...remoteData.map(String).filter(Boolean)]));
+            if (merged.length > 0) quotes = merged;
+          }
+        })
+        .catch(() => {});
+    }
+
+    let timer = null;
+    let lastIndex = -1;
+
+    mascotImg.addEventListener('click', () => {
+      // 避免连续两次抽到相同的台词
+      let nextIndex = Math.floor(Math.random() * quotes.length);
+      if (quotes.length > 1 && nextIndex === lastIndex) {
+        nextIndex = (nextIndex + 1) % quotes.length;
+      }
+      lastIndex = nextIndex;
+
+      textEl.textContent = quotes[nextIndex];
+
+      // 显示气泡动画
+      dialog.classList.remove('opacity-0', 'translate-y-2');
+      dialog.classList.add('opacity-100', 'translate-y-0');
+
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(() => {
+        dialog.classList.remove('opacity-100', 'translate-y-0');
+        dialog.classList.add('opacity-0', 'translate-y-2');
+      }, 3200);
+    });
+  })();
+</script>

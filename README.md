@@ -1,6 +1,6 @@
 # ZAKOWAY HUB - 二次元官方发布页与主导航枢纽
 
-专为二次元项目 **`animaku (杂口动漫)`** 网页端与 **`zakoway`** 客户端打造的现代化官方发布与主导航落地页系统。
+专为二次元项目 **`扎口动漫`** 网页端与 **`zakoway`** 客户端打造的现代化官方发布与主导航落地页系统。
 
 ✨ **核心特性**：
 - **静态零服务端架构**：基于现代前端静态网站生成器 **Astro**，构建产物为纯静态文件，完美适配 **Cloudflare Pages** 与 **GitHub Pages**（全球 Anycast CDN 加速、自带防 DDoS 与免费 SSL）。
@@ -34,19 +34,19 @@ npm run preview
 
 所有业务修改均集中在 `src/config/site.ts` 文件内：
 
-### 1. 修改或增加产品（如 animaku / zakoway / 后续漫画端）
+### 1. 修改或增加产品（如 扎口动漫 / zakoway / 后续漫画端）
 ```typescript
 products: [
   {
     id: 'animaku',
-    name: 'animaku (杂口动漫)',
+    name: '扎口动漫',
     type: 'web',
     badge: 'Web 网页在线端',
     subtext: '无需安装 · 即开即看',
     description: '在线弹幕追番web平台...',
     features: ['多源聚合和在线播放', '实时的多平台弹幕'],
     themeColor: '#00f2fe',
-    primaryAction: { label: '立即进入 杂口动漫 网页端', url: 'https://web.zakoway.com/' },
+    primaryAction: { label: '立即进入 扎口动漫 网页端', url: 'https://zakoway.com/' },
     secondaryActions: [
       { label: '备用线路', url: 'https://bakasine.eu.org/' }
     ]
@@ -84,6 +84,47 @@ cardAds: [
 showMockupStage: false,        // 设为 false 隐藏产品实机视窗展台（有截图时改为 true 即可）
 showFuturePlaceholder: false,  // 设为 false 隐藏“更多生态正在孵化”卡片
 ```
+
+### 4. 吉祥物 / 看板娘台词配置 (`src/config/mascot.ts`)
+- **本地修改**：直接在 `src/config/mascot.ts` 中的 `defaultMascotQuotes` 数组里增加语句。
+- **Cloudflare Pages 环境变量修改（推荐，无需改代码）**：
+  在 Cloudflare Pages 项目后台进入 **Settings** $\rightarrow$ **Environment variables**，添加变量：
+  * **变量名**：`PUBLIC_MASCOT_QUOTES`
+  * **变量值**：支持每行一句、或以分号 `;` / 竖线 `|` 隔开、或标准 JSON 数组。
+  * 保存后在 Deployments 页面点击 **Retry deployment**（重试部署）即可生效。
+- **免构建热更新（可选）**：
+  在 `src/config/mascot.ts` 中配置 `remoteQuotesUrl` 为你的 Cloudflare Worker / KV / JSON 接口，前端加载时会自动拉取合并新词。
+
+---
+
+## ⚡ Cloudflare Pages 环境变量快速自定义（紧急换源/改名/发通知）
+
+项目原生支持通过 **Cloudflare Pages 环境变量**在后台直接修改备用链接、主站域名、站点标题、标语及紧急通知，**改完后点击重新部署即可秒级生效，无需拉取或修改任何本地代码**！
+
+进入 Cloudflare Pages 项目后台 $\rightarrow$ **Settings** $\rightarrow$ **Environment variables** 添加以下变量：
+
+| 变量名称 | 作用说明 | 示例 / 说明 |
+| :--- | :--- | :--- |
+| **`PUBLIC_MAIN_URL`** | **官方主线域名** | `https://zakoway.com/`（自动同步主线卡片、网页端进入按钮与 SEO 链接） |
+| **`PUBLIC_BACKUP_URL`** | **官方备用线路** | `https://bakasine.eu.org/`（自动同步备用线路列表与卡片按钮） |
+| **`PUBLIC_BACKUP_LINES`** | **全量自定义线路列表** | 支持每行一条 `线路名称\|链接`，或者 JSON 数组（随时追加第3条、第4条线路） |
+| **`PUBLIC_APP_DOWNLOAD_URL`** | **客户端下载地址** | `https://github.com/uerax/zakoway/releases` |
+| **`PUBLIC_SITE_TITLE`** | **网站页面标题** | `ZAKOWAY - 扎口动漫 在线播放 ｜ 高清追番` |
+| **`PUBLIC_SITE_DESCRIPTION`**| **网站 SEO 描述** | 自定义搜索引擎展示简介 |
+| **`PUBLIC_BRAND_NAME`** | **品牌名称** | `ZAKOWAY` |
+| **`PUBLIC_BRAND_SLOGAN`** | **Hero 首页标语** | `连接你的 二次元世界` |
+| **`PUBLIC_BRAND_DESCRIPTION`**| **Hero 介绍文案** | `在线弹幕追番平台，支持在线观看...` |
+| **`PUBLIC_PILL_TEXT`** | **首页徽章文字** | `官方认证` 或 `2026 最新线路` |
+| **`PUBLIC_TOP_NOTICE`** | **顶部紧急通知横幅** | 只要填入文字，**顶部通知栏会自动开启展示**！留空则隐藏 |
+| **`PUBLIC_TOP_NOTICE_URL`** | **顶部通知跳转链接** | 点击通知后跳转的地址 |
+| **`PUBLIC_TELEGRAM_URL`** | **Telegram 社群群聊** | `https://t.me/zakoway_chat` |
+| **`PUBLIC_GITHUB_URL`** | **GitHub 地址** | `https://github.com/uerax` |
+| **`PUBLIC_MASCOT_QUOTES`** | **吉祥物看板娘台词** | 每行一句，或分号隔开 |
+
+> 💡 **小贴士**：
+> 例如当遇到主站域名被污染时，只需要在 Cloudflare 环境变量里把 `PUBLIC_MAIN_URL` 改成新域名，然后在 **Deployments** 页面点击 **Retry deployment**，整站的导航与按钮瞬间全部切换为新主线！
+
+
 
 ---
 
