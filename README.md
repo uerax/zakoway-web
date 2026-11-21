@@ -1,193 +1,100 @@
-# ZAKOWAY HUB - 二次元官方发布页与主导航枢纽
+<div align="center">
 
-专为二次元项目 **`扎口动漫`** 网页端与 **`zakoway`** 客户端打造的现代化官方发布与主导航落地页系统。
+  <h1>扎口动漫</h1>
 
-✨ **核心特性**：
-- **静态零服务端架构**：基于现代前端静态网站生成器 **Astro**，构建产物为纯静态文件，完美适配 **Cloudflare Pages** 与 **GitHub Pages**（全球 Anycast CDN 加速、自带防 DDoS 与免费 SSL）。
-- **配置驱动架构 (Config-Driven)**：页面视觉与业务数据彻底解耦，后续增加新产品（漫画/小说/社区）、调整线路或开启/关闭广告位，只需编辑 `src/config/site.ts` 配置文件，无需修改排版代码。
-- **现代化暗黑二次元视觉**：高透毛玻璃拟态（Glassmorphism）、微渐变光晕背景、支持明暗主题切换。
-- **SEO 深度优化**：预置 TDK、二次元高频引流关键词、社交分享卡片（Open Graph & Twitter Card）与 Schema 软件结构化微数据。
-- **防失联与备用线路**：内置一键复制官方主线、备用 CDN 线路与官方 TG / GitHub 社区入口。
-- **原生广告/赞助位预留**：提供与原生卡片融为一体的原生卡片广告位、顶部通告栏及底部赞助商 Logo 墙，均支持独立一键开关。
+  <img src="https://github.com/uerax/zakoway-web/blob/master/header-banner.png" width="900" alt="扎口动漫 logo" />
 
----
+  <p><strong>现代化二次元番剧流媒体客户端 · 为极致追番体验而生</strong></p>
 
-## 本地开发与打包
+  <p>
+    <a href="https://zakoway.com/">
+      <img src="https://img.shields.io/badge/在线体验-zakoway.com-FF4081?style=for-the-badge&logo=safari&logoColor=white" alt="Live Demo" />
+    </a>
+  </p>
 
-```bash
-# 1. 安装项目依赖
-npm install
+  <p>
+    🌐 <strong>立即体验：</strong><a href="https://zakoway.com/" target="_blank"><strong>https://zakoway.com/</strong></a>
+  </p>
 
-# 2. 启动本地开发热重载服务 (访问 http://127.0.0.1:4321)
-npm run dev
+  <p>集高清直链、弹幕聚合、实时超分、智能跳过于一体的沉浸式追番平台 (～￣▽￣)～</p>
 
-# 3. 本地打包静态产物 (输出到 dist/ 目录，耗时约 600ms)
-npm run build
-
-# 4. 本地预览打包产物
-npm run preview
-```
+</div>
 
 ---
 
-## 业务配置指引 (`src/config/site.ts`)
+## 📸 界面预览
 
-所有业务修改均集中在 `src/config/site.ts` 文件内：
-
-### 1. 修改或增加产品（如 扎口动漫 / zakoway / 后续漫画端）
-```typescript
-products: [
-  {
-    id: 'animaku',
-    name: '扎口动漫',
-    type: 'web',
-    badge: 'Web 网页在线端',
-    subtext: '无需安装 · 即开即看',
-    description: '在线弹幕追番web平台...',
-    features: ['多源聚合和在线播放', '实时的多平台弹幕'],
-    themeColor: '#00f2fe',
-    primaryAction: { label: '立即进入 扎口动漫 网页端', url: 'https://zakoway.com/' },
-    secondaryActions: [
-      { label: '备用线路', url: 'https://bakasine.eu.org/' }
-    ]
-  },
-  // 想要新增产品，只需在数组内追加一个对象即可自动在前端生成对应卡片！
-]
-```
-
-### 2. 广告与赞助位开关
-```typescript
-// 顶部通告栏广告（设 enabled: false 即可完全隐藏）
-topNoticeBanner: {
-  enabled: false,
-  tag: '赞助推荐',
-  text: '二次元周边商城限时特惠...',
-  url: 'https://sponsor.example.com',
-  actionLabel: '前往查看'
-},
-
-// 原生卡片广告位（伪装在产品流中，带小号“赞助合作”角标，不破坏页面美感）
-cardAds: [
-  {
-    id: 'ad-game-rpg',
-    enabled: false, // 设为 false 自动隐藏，产品卡片会自动重排，不留空隙
-    title: '某某二次元抽卡大作',
-    description: '豪华声优阵容加盟...',
-    tag: '赞助合作 · AD',
-    targetUrl: 'https://game-sponsor.example.com'
-  }
-]
-```
-
-### 3. 模块显隐控制
-```typescript
-showMockupStage: false,        // 设为 false 隐藏产品实机视窗展台（有截图时改为 true 即可）
-showFuturePlaceholder: false,  // 设为 false 隐藏“更多生态正在孵化”卡片
-```
-
-### 4. 吉祥物 / 看板娘台词与语音配置 (`src/config/mascot.ts`)
-- **双模运作（在线优先 + 本地兜底）**：
-  * **在线实时反代**：部署到 Cloudflare Pages 时，会自动启用 `functions/meme/random.ts` 边缘函数，实时拉取 `https://sbhzm.cn/` 当天最新发布的烂梗（走专用 `/meme/random` 路由，彻底避开默认 `/api/` 缓存规则）。
-  * **本地全量兜底**：内置 **191 条全量语音** 与 **136 条精选经典烂梗**（位于 `src/data/sbhzm-fallback.json`），0 延迟瞬时加载，断网或离线秒级回退。
-  * **点击发声**：点击看板娘随机播放语音（包含语音标题动态提示），音量严格设为 **50%**。
-  * **一键更新词库与语音**：可在终端运行 `npm run update:sbhzm` 自动爬取同步最新数据。
-- **公共 API 开放接口 (`GET /meme/random`)**：
-  * 支持跨域 CORS (`*`)，彻底绕开 `/api/` 缓存，可供手机端 App、小程序或外部系统随时调用：
-  * 返回格式：`{ "quote": "语录文本", "voice": { "title": "...", "url": "https://..." }, "volume": 0.5 }`
-- **Cloudflare Pages 环境变量修改**：
-  若在 Cloudflare Pages 设置了 `PUBLIC_MASCOT_QUOTES`，优先展示您自定义的专属台词。
-
+<p align="center">
+  <img src="https://github.com/uerax/zakoway-web/blob/master/index.png" alt="扎口动漫 界面" width="900" />
+  <img src="https://github.com/uerax/zakoway-web/blob/master/play.png" alt="扎口动漫 播放页面" width="900" />
+</p>
 
 ---
 
-## ⚡ Cloudflare Pages 环境变量快速自定义（紧急换源/改名/发通知）
+## ✨ 核心功能亮点
 
-项目原生支持通过 **Cloudflare Pages 环境变量**在后台直接修改备用链接、主站域名、站点标题、标语及紧急通知，**改完后点击重新部署即可秒级生效，无需拉取或修改任何本地代码**！
+### 📺 沉浸式流媒体播放
+* **超清画质极速播放**：开箱支持 1080P 超清流畅直链，秒开加载，拒绝等待与转圈。
+* **画面超分辨率画质增强**：支持实时超分辨率增强，画面更锐利、线条更清晰，老番与低清番剧重焕新生。
+* **智能跳过片头片尾 (OP/ED)**：根据精准时间戳智能跳过 OP/ED，追番追剧连播体验行云流水。
+* **广告切片智能过滤**：纯净观影体验，自动拦截并过滤第三方公共切片源内置广告。
+* **多视频源自由切换**：聚合多条高质量播放线路，支持播放时一键秒级换源，支持线路自定义排序与优选。
+* **画面比例自适应调节**：支持 16:9、4:3、铺满全屏以及原始比例自由切换。
+* **高级播放器工具箱**：
+  * **原画一键截图**：精准截取当前帧超清画面，收藏精彩壁纸。
+  * **水平镜像翻转**：支持画面左右翻转，满足特异观影需求。
+  * **画中画悬浮窗**：支持将播放器置顶悬浮在桌面角落，工作摸鱼追番两不误。
 
-进入 Cloudflare Pages 项目后台 $\rightarrow$ **Settings** $\rightarrow$ **Environment variables** 添加以下变量：
+### 💬 弹幕互动与聚合系统
+* **跨平台弹幕海量聚合**：汇聚丰富弹幕库，精彩吐槽与共鸣实时同步，重温与同好刷屏的快乐。
+* **进度条高能弹幕热力图**：播放进度条直观展示弹幕密集度波峰图，名场面、高能伏笔、催泪瞬间一目了然。
+* **弹幕智能防挡与个性定制**：支持智能防挡字幕，支持弹幕字号大小、透明度、滚动速度微调与黑名单屏蔽词过滤。
+* **弹幕时间轴微调与偏移对齐**：支持按秒级提前、延后或复位弹幕偏移量，轻松解决不同片源音画与弹幕错位问题。
+* **本地弹幕文件导入**：支持导入本地 XML 弹幕文件与外挂弹幕包。
 
-| 变量名称 | 作用说明 | 示例 / 说明 |
-| :--- | :--- | :--- |
-| **`PUBLIC_MAIN_URL`** | **官方主线域名** | `https://zakoway.com/`（自动同步主线卡片、网页端进入按钮与 SEO 链接） |
-| **`PUBLIC_BACKUP_URL`** | **官方备用线路** | `https://bakasine.eu.org/`（自动同步备用线路列表与卡片按钮） |
-| **`PUBLIC_BACKUP_LINES`** | **全量自定义线路列表** | 支持每行一条 `线路名称\|链接`，或者 JSON 数组（随时追加第3条、第4条线路） |
-| **`PUBLIC_APP_DOWNLOAD_URL`** | **客户端下载地址** | `https://github.com/uerax/zakoway/releases` |
-| **`PUBLIC_SITE_TITLE`** | **网站页面标题** | `扎口动漫 - 在线播放与客户端下载 ｜ 高清追番` |
-| **`PUBLIC_SITE_DESCRIPTION`**| **网站 SEO 描述** | 自定义搜索引擎展示简介 |
-| **`PUBLIC_BRAND_NAME`** | **品牌名称** | `扎口动漫` |
-| **`PUBLIC_BRAND_SLOGAN`** | **Hero 首页标语** | `连接你的 二次元世界` |
-| **`PUBLIC_BRAND_DESCRIPTION`**| **Hero 介绍文案** | `在线弹幕追番平台，支持在线观看...` |
-| **`PUBLIC_PILL_TEXT`** | **首页徽章文字** | `官方认证` 或 `2026 最新线路` |
-| **`PUBLIC_TOP_NOTICE`** | **顶部紧急通知横幅** | 只要填入文字，**顶部通知栏会自动开启展示**！留空则隐藏 |
-| **`PUBLIC_TOP_NOTICE_URL`** | **顶部通知跳转链接** | 点击通知后跳转的地址 |
-| **`PUBLIC_TELEGRAM_URL`** | **Telegram 社群群聊** | `https://t.me/zakoway_chat` |
-| **`PUBLIC_GITHUB_URL`** | **GitHub 地址** | `https://github.com/uerax` |
-| **`PUBLIC_MASCOT_QUOTES`** | **吉祥物看板娘台词** | 每行一句，或分号隔开 |
+### 📅 番剧日历与全方位探索
+* **周更放送时刻表**：周一至周日番剧更新日程表清晰明了，当日更新番剧动态一手掌握。
+* **实时观看排行榜**：基于真实观看热度与追番人数统计，热门动画榜单实时呈现。
+* **智能检索与深度维基**：
+  * 支持按季度、开播年份、题材风格多维度筛选与关键词联想搜索。
+  * 涵盖详尽的番剧介绍、声优阵容（CV）、制作人员（STAFF）与维基评分。
 
-> 💡 **小贴士**：
-> 例如当遇到主站域名被污染时，只需要在 Cloudflare 环境变量里把 `PUBLIC_MAIN_URL` 改成新域名，然后在 **Deployments** 页面点击 **Retry deployment**，整站的导航与按钮瞬间全部切换为新主线！
+### 📚 追番管理与进度同步
+* **状态分类管理**：支持将番剧归类为「想看」、「在看」、「看过」，轻松打理专属于自己的追番书架。
+* **主流番组进度双向云同步**：打通主流动画档案平台，个人进度实时同步，换设备换浏览器永不丢失。
+* **智能断点续播**：精确记录每部番剧历史播放集数与进度秒数，再次打开瞬间接续精彩。
 
-
-
----
-
-## 零成本部署到 Cloudflare Pages
-
-Cloudflare Pages 拥有全球优质 CDN 节点与强大的抗 DDoS 攻击能力，非常适合二次元发布页。
-
-### 推荐方案 A：直接打包上传（无需授权 GitHub，最隐私安全）
-
-如果你不想给 Cloudflare 授权 GitHub 账号权限，直接上传本地打包好的 `dist/` 文件夹即可：
-
-#### 步骤 1：本地执行打包
-```bash
-npm run build
-```
-打包完成后会在根目录下生成 `dist/` 文件夹。
-
-#### 步骤 2：网页端拖拽上传
-1. 打开并登录 [Cloudflare 控制台](https://dash.cloudflare.com/)。
-2. 左侧点击 **Workers 和 Pages (Workers & Pages)**。
-3. 点击 **创建应用程序 (Create application)**。
-4. 选择 **Pages** 标签，点击右侧的 **直接上传 (Upload assets)**（不要点“连接到 Git”）。
-5. 输入项目名称（如 `zakoway-web`），点击 **创建项目**。
-6. 将电脑里的 **`dist` 文件夹直接拖拽入虚线框中**。
-7. 点击 **部署站点 (Deploy site)**，约 5 秒内即可完成全球部署并分配一个 `*.pages.dev` 域名。
-
-#### 步骤 3（可选）：使用命令行一键部署
-后续更新如果不想每次打开网页拖拽，可直接在终端运行 Cloudflare 官方 CLI 工具：
-```bash
-# 打包并自动推送到 Cloudflare Pages
-npm run build
-npx wrangler pages deploy dist --project-name zakoway-web
-```
+### 🎨 现代化交互与视效设计
+* **深色 / 浅色模式自由切换**：夜间观影不刺眼，明亮模式更清新，贴心呵护用眼舒适。
+* **多场景观影布局**：提供系统级全屏、网页全屏、宽屏剧场模式随心挑选。
+* **桌面端键盘快捷键**：深度优化键位映射，空格暂停、方向键快进退/调音量，单手即可轻松操作。
+* **移动端触控手势操控**：针对手机/平板触屏全面适配双击启停、长按 2.0X 极速快进、左右滑动精确寻轨。
+* **灵动交互挂件**：右下角常驻互动看板娘与一键回到顶部趣味动效。
 
 ---
 
-### 备选方案 B：关联 GitHub 仓库自动部署（推送自动更新）
+## ⌨️ 常用快捷操作一览
 
-如果你希望每次 `git push` 代码后 Cloudflare 自动完成编译与发布：
-1. 打开 [Cloudflare 控制台](https://dash.cloudflare.com/) → **Workers 和 Pages** → **创建应用程序** → **Pages** → **连接到 Git**。
-2. 授权并选择你的 GitHub 仓库（`uerax/zakoway-web`）。
-3. 配置参数：
-   - **Framework preset (框架预设)**：选择 **`Astro`**
-   - **Build command (构建命令)**：`npm run build`
-   - **Build output directory (输出目录)**：`dist`
-   - **Environment variables (环境变量)**：添加 `NODE_VERSION` = `20`
-4. 点击 **保存并部署** 即可。
-
----
-
-### 备选方案 C：部署到 GitHub Pages
-
-项目已内置 `.github/workflows/deploy.yml` 自动化工作流：
-1. 将代码推送到 GitHub 仓库的 `master` 分支。
-2. 在仓库页面点击 **Settings** → **Pages**。
-3. 在 **Build and deployment** 下方的 **Source** 选择 **`GitHub Actions`**。
-4. 每次 push 代码，GitHub 会自动完成构建并发布。
+| 快捷键 / 手势 | 对应功能 |
+| :--- | :--- |
+| `Space` / `K` | 播放 / 暂停 |
+| `←` / `→` | 快退 5 秒 / 快进 5 秒 |
+| `↑` / `↓` | 音量调整 ±5% |
+| `F` | 进入 / 退出系统全屏 |
+| `Shift + W` | 网页全屏模式 |
+| `W` | 切换画面比例 (16:9 / 4:3 / 铺满 / 原始) |
+| `D` | 显示 / 隐藏弹幕 |
+| `Alt + M` | 打开弹幕个性化调节面板 |
+| `,` / `.` / `/` | 弹幕时间轴微调 (延后 / 提前 / 重置偏移) |
+| `P` / `N` | 切换 上一集 / 下一集 |
+| `鼠标右键` | 打开播放器高级功能菜单 (超分 / 原画截图 / 镜像 / 画中画) |
+| **移动端双击** | 播放 / 暂停 |
+| **移动端长按** | 2.0X 极速快进 |
+| **移动端横向滑动** | 快速寻轨快进 / 快退 |
 
 ---
 
-## 自定义域名绑定
+## 🔒 纯净声明
 
-无论使用哪种部署方案，在 Cloudflare Pages 项目后台中点击 **自定义域 (Custom domains)** → **设置自定义域**，填入你的主域名（例如 `zakoway.com` 或 `hub.zakoway.com`），Cloudflare 会自动完成 DNS 解析配置并自动签发免费 SSL 证书。
+* **无商业追踪与弹窗**：不内置任何商业追踪 SDK，尊重用户隐私，所有历史记录与偏好设置均保存在本地。
+* **免责声明**：本项目仅作为现代化客户端前端与浏览播放工具，不存储、不分发任何音视频资源，内容均来源于网络公开索引。
